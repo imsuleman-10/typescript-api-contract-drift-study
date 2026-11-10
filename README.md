@@ -1,20 +1,20 @@
-# Measuring API Contract Drift in TypeScript-Based Web Applications
+# Investigating API Contract Drift in TypeScript-Based Web Applications
 
-**An empirical study of runtime validation and automated testing**
+**Research workspace for an empirical Software Engineering study**
 
 This repository is the research workspace for a proposed undergraduate study in
 software engineering. Its intended focus is how API contract drift can be
 identified and evaluated in TypeScript-based web applications, with runtime
 validation and automated testing as the motivating techniques.
 
-> **Research status:** Phase 1 — literature review and research-gap assessment.
-> No literature synthesis, research gap, hypotheses, experimental results, or
-> conclusions are asserted in this repository yet. These will be considered
-> only after sources have been collected, screened, and verified.
+> **Research status:** Phase 1 protocol prepared for review. Literature
+> searches and screening have **not** been conducted. No research gap,
+> literature findings, hypotheses, experimental results, or conclusions are
+> asserted.
 
 ## Researcher and context
 
-- **Researcher:** Suleman
+- **Researcher:** Suleman Zaheer
 - **Program:** Undergraduate Computer Science
 - **Institution:** University of Engineering and Technology, Lahore
 - **Research area:** Software Engineering
@@ -31,8 +31,25 @@ The repository will support a transparent and reproducible research workflow:
   observations; and
 - prepare research outputs only as each phase is completed.
 
-This README defines the initial literature-review protocol. It is not a
-completed literature review or a claim that the topic is novel.
+This README summarizes the project. The detailed Phase 1 protocol is the
+authoritative source for proposed searches, screening rules, and templates; it
+is not a completed literature review or a claim that the topic is novel.
+
+## Phase 1 deliverables
+
+The detailed, versioned strategy and screening procedure is in the
+[literature review protocol](docs/literature-review-protocol.md). It documents
+the proposed search sources and queries, date/language scope, eligibility and
+quality criteria, screening workflow, anticipated biases, and approval gate.
+
+Blank templates are available for the
+[search log](data/search-log.csv),
+[screening log](data/screening-log.csv),
+[paper evaluation matrix](data/paper-evaluation-matrix.csv), and
+[terminology log](data/terminology-log.csv). Protocol changes can be recorded
+in the [amendment log](data/protocol-amendments.csv). The templates contain no
+search results or paper claims. Candidate queries in the protocol are proposed
+and have not been run.
 
 ## Scope and terminology to investigate
 
@@ -66,22 +83,20 @@ not be proposed until the collected sources have been assessed.
 
 ### 2. Search venues
 
-Search the following sources where access is available, recording the platform
-actually used and the date of each search:
+The protocol specifies the planned sources: IEEE Xplore, ACM Digital Library,
+Scopus, Web of Science, SpringerLink, ScienceDirect, DBLP, Google Scholar,
+relevant preprint repositories, and official publisher/DOI records for
+verification. Searches are pending; the detailed roles and limitations are in
+the protocol.
 
-1. **ACM Digital Library**
-2. **IEEE Xplore**
-3. **Scopus** and/or **Web of Science** for indexed cross-disciplinary
-   discovery
-4. **Google Scholar** for supplementary discovery and citation chasing
-5. **Crossref** for DOI and bibliographic metadata verification
-6. **Publisher pages** for final publication details and full-text access
-
-Google Scholar and citation chasing are supplementary discovery methods; they
-should not be reported as if they were equivalent to a curated bibliographic
-database. Record access restrictions and any search-interface limitations.
+Do not treat the listed platforms as equivalent or describe a planned search
+as completed. Record platform-specific limitations and the actual search date.
 
 ### 3. Search concepts and example queries
+
+The complete candidate query set, platform-specific adaptations, and
+execution rules are in the [Phase 1 protocol](docs/literature-review-protocol.md#6-proposed-search-strategy).
+The examples below are also proposed and have not been run.
 
 Adapt syntax to each database, preserve the exact query that was run, and record
 any filters. Begin broadly; use narrower combinations to find work on the
@@ -183,10 +198,9 @@ systematic unless its process and reporting meet the selected review standard.
 
 ### 6. Source evaluation table template
 
-Create one row per distinct study or source. Use `Unknown` or `Not reported`
-instead of inferring missing details. Add rows as needed; keep the source ID
-stable so notes, citations, and later evidence can be traced back to the same
-record.
+Use the blank [paper evaluation matrix](data/paper-evaluation-matrix.csv).
+Create one row per distinct work/version and use stable source IDs. Unknown
+details must remain unknown; do not infer missing metadata or findings.
 
 | Source ID | Full citation | DOI / publisher URL | Source type / venue | Peer-reviewed? | Study aim | API / system context | Contract or drift definition | Runtime validation approach | Automated testing approach | Study design / data | Evaluation measures | Main findings (with page/section) | Limitations noted by authors | Relevance to this review | Screening decision and reason | Metadata verified? |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
@@ -194,13 +208,9 @@ record.
 
 ### 7. Search and screening log template
 
-| Search ID | Date (YYYY-MM-DD) | Database / platform | Exact query | Filters / date range | Results reported | Exported / screened | Discovery route or notes |
-|---|---|---|---|---|---:|---:|---|
-| Q001 |  |  |  |  |  |  |  |
-
-| Source ID | Screening stage | Decision | Reason / evidence | Reviewer | Date |
-|---|---|---|---|---|---|
-| S001 | Title/abstract or full text | Include / Exclude / Unclear |  |  |  |
+Use the blank [search log](data/search-log.csv) and
+[screening log](data/screening-log.csv). They intentionally contain headers
+only because no searches or screening have been performed.
 
 ### 8. Evidence synthesis and gap assessment
 
@@ -220,18 +230,22 @@ prior work exists.
 
 ## High-level research workflow
 
-The project is intended to proceed in the following order. Only Phase 1 is
-active at this point.
+The project has ten gated phases. Only Phase 1 strategy is being prepared;
+searches are not started, and Phase 2 must wait for explicit approval of the
+protocol.
 
 | Phase | Intended work | Status |
 |---|---|---|
-| 1. Literature review and research gap | Search, verify, screen, extract, and synthesize relevant sources; assess a potential gap from evidence | **Active** |
-| 2. Research questions and hypotheses | Define measurable questions, objectives, and hypotheses based on Phase 1 | Not started |
-| 3. Methodology and benchmark design | Specify systems, comparisons, data, procedures, measures, and reproducibility controls | Not started |
-| 4. Implementation and experiments | Implement the approved design and collect actual observations | Not started |
-| 5. Statistical analysis and visualization | Analyze recorded data using a justified, documented analysis plan | Not started |
-| 6. Manuscript writing | Draft sections appropriate to completed work; do not write results before data exist | Not started |
-| 7. Verification and submission preparation | Check references, methods, artifacts, venue requirements, and AI disclosure | Not started |
+| 1. Literature review strategy | Define scope, queries, eligibility, quality appraisal, screening, logs, terminology, and bias controls | **Protocol drafted; searches not started** |
+| 2. Literature collection and screening | Find, verify, and screen sources after Phase 1 approval | Awaiting Phase 1 approval |
+| 3. Literature synthesis and gap assessment | Synthesize only verified and screened sources | Not started |
+| 4. Methodology and experimental design | Design the study from an approved gap | Not started |
+| 5. Implementation and experimental execution | Implement the approved protocol and collect actual data | Not started |
+| 6. Results and statistical analysis | Analyze retained experimental data | Not started |
+| 7. Academic manuscript writing | Draft from approved literature, method, and actual results | Not started |
+| 8. Research quality assurance | Conduct a reviewer-style quality and integrity review | Not started |
+| 9. Venue selection and submission preparation | Compare legitimate venues and prepare materials | Not started |
+| 10. Peer review, revision, and publication | Respond to actual reviews and maintain publication records | Not started |
 
 ## Research integrity and reproducibility
 
