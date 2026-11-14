@@ -9,7 +9,7 @@
 
 ## 1. Overview and Hardware Requirements
 
-This artifact contains the complete replication package for the empirical study on API contract drift in TypeScript-based web applications. It includes the dataset logs, literature evaluation matrix, benchmark taxonomy, mutation generators, six strategy implementations, Vitest test suite, and the empirical experiment runner.
+This artifact contains the complete replication package for the empirical study on API contract drift in TypeScript-based web applications, authored and maintained by **Suleman Zaheer** ([@imsuleman-10](https://github.com/imsuleman-10)). It includes the dataset logs, literature evaluation matrix, benchmark taxonomy, mutation generators, six strategy implementations, Vitest test suite, and the empirical experiment runner.
 
 ### Minimum System Requirements:
 - **Operating System:** Cross-platform (Windows 10/11, macOS 12+, or Ubuntu Linux 20.04+)
