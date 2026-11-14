@@ -1,0 +1,50 @@
+{
+  "timestamp": "2026-11-14T10:07:48.653Z",
+  "totalScenariosEvaluated": 576,
+  "domainsEvaluated": [
+    "UserProfile",
+    "OrderCheckout",
+    "PaymentTransaction",
+    "DeviceTelemetry"
+  ],
+  "strategiesEvaluated": [
+    "Static TypeScript (Compile-Time Only)",
+    "Zod Runtime Schema Validation",
+    "TypeBox (Compiled JSON Schema)",
+    "Valibot Modular Validation",
+    "OpenAPI 3.1 Specification Validation",
+    "Consumer-Driven Contract Testing (Pact)"
+  ],
+  "overallRecallByStrategy": {
+    "Static TypeScript (Compile-Time Only)": 0,
+    "Zod Runtime Schema Validation": 79.5,
+    "TypeBox (Compiled JSON Schema)": 79.5,
+    "Valibot Modular Validation": 79.5,
+    "OpenAPI 3.1 Specification Validation": 79.5,
+    "Consumer-Driven Contract Testing (Pact)": 37.5
+  },
+  "falsePositiveRateByStrategy": {
+    "Static TypeScript (Compile-Time Only)": 0,
+    "Zod Runtime Schema Validation": 0,
+    "TypeBox (Compiled JSON Schema)": 0,
+    "Valibot Modular Validation": 0,
+    "OpenAPI 3.1 Specification Validation": 0,
+    "Consumer-Driven Contract Testing (Pact)": 0
+  },
+  "meanLatencyByStrategyUs": {
+    "Static TypeScript (Compile-Time Only)": 1.3,
+    "Zod Runtime Schema Validation": 25.89,
+    "TypeBox (Compiled JSON Schema)": 5.76,
+    "Valibot Modular Validation": 11.13,
+    "OpenAPI 3.1 Specification Validation": 11.42,
+    "Consumer-Driven Contract Testing (Pact)": 4.14
+  },
+  "meanDiagnosticScoreByStrategy": {
+    "Static TypeScript (Compile-Time Only)": 0,
+    "Zod Runtime Schema Validation": 0.92,
+    "TypeBox (Compiled JSON Schema)": 0.98,
+    "Valibot Modular Validation": 1,
+    "OpenAPI 3.1 Specification Validation": 1,
+    "Consumer-Driven Contract Testing (Pact)": 1
+  }
+}

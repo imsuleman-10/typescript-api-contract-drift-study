@@ -1,0 +1,40 @@
+{
+  "name": "typescript-api-contract-drift-study",
+  "version": "1.0.0",
+  "description": "Empirical study on API contract drift in TypeScript-based web applications",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "experiment": "tsx src/scripts/run-experiment.ts",
+    "start": "tsx src/cli.ts"
+  },
+  "keywords": [
+    "typescript",
+    "api-contract",
+    "contract-drift",
+    "schema-validation",
+    "zod",
+    "typebox",
+    "valibot",
+    "openapi",
+    "contract-testing"
+  ],
+  "author": "Suleman Zaheer <sulemanzaheer09@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@sinclair/typebox": "^0.34.14",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "valibot": "^1.0.0-rc.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}

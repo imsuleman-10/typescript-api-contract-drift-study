@@ -1,0 +1,25 @@
+strategy_name,domain,sample_size,mean_us,median_us,p90_us,p99_us,min_us,max_us,throughput_ops_per_sec
+Static TypeScript (Compile-Time Only),UserProfile,1000,2.079,1.1,1.6,21.4,0.8,124.7,356265
+Zod Runtime Schema Validation,UserProfile,1000,31.602,20.5,46.2,155.8,12.6,2801.9,31034
+TypeBox (Compiled JSON Schema),UserProfile,1000,6.653,5.1,6,62,3.8,180.5,137112
+Valibot Modular Validation,UserProfile,1000,11.961,10.1,13,86.8,3.7,274.5,80587
+OpenAPI 3.1 Specification Validation,UserProfile,1000,11.388,9.8,11.3,72.3,5.4,324.9,84039
+Consumer-Driven Contract Testing (Pact),UserProfile,1000,6.347,5.3,6.5,24.4,3.4,181.1,148551
+Static TypeScript (Compile-Time Only),OrderCheckout,1000,1.108,1,1,1.4,0.9,71.3,669972
+Zod Runtime Schema Validation,OrderCheckout,1000,24.21,20.9,28.9,100.5,11.9,747.5,40603
+TypeBox (Compiled JSON Schema),OrderCheckout,1000,5.746,4.7,5.8,26.5,3.5,139,161314
+Valibot Modular Validation,OrderCheckout,1000,14.823,11.2,14.9,87.8,9.3,957.9,65006
+OpenAPI 3.1 Specification Validation,OrderCheckout,1000,11.562,9.1,10.9,30.9,5,1217,83102
+Consumer-Driven Contract Testing (Pact),OrderCheckout,1000,3.918,3.1,4.6,13.7,2,411.2,232607
+Static TypeScript (Compile-Time Only),PaymentTransaction,1000,0.992,0.9,1,1,0.9,57.3,751654
+Zod Runtime Schema Validation,PaymentTransaction,1000,15.787,13.4,15.5,75.6,6.8,1533.7,60925
+TypeBox (Compiled JSON Schema),PaymentTransaction,1000,3.39,2.7,2.9,7.8,2.6,288,268781
+Valibot Modular Validation,PaymentTransaction,1000,6.832,5.9,6.5,26.3,5.2,145,136575
+OpenAPI 3.1 Specification Validation,PaymentTransaction,1000,10.018,8,9,29,7,1183,95574
+Consumer-Driven Contract Testing (Pact),PaymentTransaction,1000,3.674,3.2,3.5,9.1,2.8,164.1,244978
+Static TypeScript (Compile-Time Only),DeviceTelemetry,1000,1.016,0.9,1,2.7,0.8,39.5,730247
+Zod Runtime Schema Validation,DeviceTelemetry,1000,31.972,30.1,35,99.3,16.7,982.2,30765
+TypeBox (Compiled JSON Schema),DeviceTelemetry,1000,7.24,5.6,6.1,37.7,3.7,1286.5,128761
+Valibot Modular Validation,DeviceTelemetry,1000,10.889,9.3,11.1,64.1,4.7,378.5,88225
+OpenAPI 3.1 Specification Validation,DeviceTelemetry,1000,12.694,11.2,15.6,99.5,5.8,226.8,76028
+Consumer-Driven Contract Testing (Pact),DeviceTelemetry,1000,2.623,2,3,9,1.8,103.3,339075

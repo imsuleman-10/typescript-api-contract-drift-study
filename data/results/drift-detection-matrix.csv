@@ -1,0 +1,577 @@
+scenario_code,scenario_name,domain,dimension,severity,strategy_name,expected_detection,actual_detection,is_true_positive,is_true_negative,is_false_positive,is_false_negative,execution_time_us,diagnostic_score,diagnostic_summary
+STR-01,Remove Required Key,UserProfile,structural,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,7.1,0,Passed (No drift flagged)
+STR-01,Remove Required Key,UserProfile,structural,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,6477.5,1,[userId] Required
+STR-01,Remove Required Key,UserProfile,structural,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,291.9,1,[userId] Expected required property; [userId] Expected string
+STR-01,Remove Required Key,UserProfile,structural,breaking,Valibot Modular Validation,true,true,true,false,false,false,3116.9,1,"[userId] Invalid key: Expected ""userId"" but received undefined"
+STR-01,Remove Required Key,UserProfile,structural,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,2296.4,1,[userId] must have required property 'userId'
+STR-01,Remove Required Key,UserProfile,structural,breaking,Consumer-Driven Contract Testing (Pact),true,true,true,false,false,false,334.5,1,[userId] Consumer expectation unmet: expected property 'userId' is missing
+STR-02,Rename Required Key,UserProfile,structural,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,9.8,0,Passed (No drift flagged)
+STR-02,Rename Required Key,UserProfile,structural,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,919.2,1,[email] Required
+STR-02,Rename Required Key,UserProfile,structural,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,6.5,1,[email] Expected required property; [email] Expected string
+STR-02,Rename Required Key,UserProfile,structural,breaking,Valibot Modular Validation,true,true,true,false,false,false,725.8,1,"[email] Invalid key: Expected ""email"" but received undefined"
+STR-02,Rename Required Key,UserProfile,structural,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,263.1,1,[email] must have required property 'email'
+STR-02,Rename Required Key,UserProfile,structural,breaking,Consumer-Driven Contract Testing (Pact),true,true,true,false,false,false,23.3,1,[email] Consumer expectation unmet: expected property 'email' is missing
+STR-03,Add Unknown Key,UserProfile,structural,non-breaking,Static TypeScript (Compile-Time Only),false,false,false,true,false,false,0.9,0,Passed (No drift flagged)
+STR-03,Add Unknown Key,UserProfile,structural,non-breaking,Zod Runtime Schema Validation,false,false,false,true,false,false,749.9,0,Passed (No drift flagged)
+STR-03,Add Unknown Key,UserProfile,structural,non-breaking,TypeBox (Compiled JSON Schema),false,false,false,true,false,false,248.1,0,Passed (No drift flagged)
+STR-03,Add Unknown Key,UserProfile,structural,non-breaking,Valibot Modular Validation,false,false,false,true,false,false,151.5,0,Passed (No drift flagged)
+STR-03,Add Unknown Key,UserProfile,structural,non-breaking,OpenAPI 3.1 Specification Validation,false,false,false,true,false,false,234.9,0,Passed (No drift flagged)
+STR-03,Add Unknown Key,UserProfile,structural,non-breaking,Consumer-Driven Contract Testing (Pact),false,false,false,true,false,false,19.9,0,Passed (No drift flagged)
+STR-04,Remove Nested Required Key,UserProfile,structural,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,1.2,0,Passed (No drift flagged)
+STR-04,Remove Nested Required Key,UserProfile,structural,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,301.6,1,[address.postalCode] Required
+STR-04,Remove Nested Required Key,UserProfile,structural,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,19.2,1,[address.postalCode] Expected required property; [address.postalCode] Expected string
+STR-04,Remove Nested Required Key,UserProfile,structural,breaking,Valibot Modular Validation,true,true,true,false,false,false,108.6,1,"[address.postalCode] Invalid key: Expected ""postalCode"" but received undefined"
+STR-04,Remove Nested Required Key,UserProfile,structural,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,56.4,1,[address] must have required property 'postalCode'
+STR-04,Remove Nested Required Key,UserProfile,structural,breaking,Consumer-Driven Contract Testing (Pact),true,true,true,false,false,false,20.3,1,[address.postalCode] Consumer expectation unmet: expected property 'address.postalCode' is missing
+STR-05,Flatten Nested Hierarchy,UserProfile,structural,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.9,0,Passed (No drift flagged)
+STR-05,Flatten Nested Hierarchy,UserProfile,structural,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,202.9,1,[address] Required
+STR-05,Flatten Nested Hierarchy,UserProfile,structural,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,20.4,1,[address] Expected required property; [address] Expected object
+STR-05,Flatten Nested Hierarchy,UserProfile,structural,breaking,Valibot Modular Validation,true,true,true,false,false,false,75.6,1,"[address] Invalid key: Expected ""address"" but received undefined"
+STR-05,Flatten Nested Hierarchy,UserProfile,structural,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,47.5,1,[address] must have required property 'address'
+STR-05,Flatten Nested Hierarchy,UserProfile,structural,breaking,Consumer-Driven Contract Testing (Pact),true,true,true,false,false,false,19.1,1,[address.city] Consumer expectation unmet: expected property 'address.city' is missing; [address.postalCode] Consumer expectation unmet: expected property 'address.postalCode' is missing
+TYP-01,Integer to String,UserProfile,scalar_type,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.8,0,Passed (No drift flagged)
+TYP-01,Integer to String,UserProfile,scalar_type,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,123.7,1,"[age] Expected number, received string"
+TYP-01,Integer to String,UserProfile,scalar_type,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,10.2,1,[age] Expected integer
+TYP-01,Integer to String,UserProfile,scalar_type,breaking,Valibot Modular Validation,true,true,true,false,false,false,110.9,1,"[age] Invalid type: Expected number but received ""34"""
+TYP-01,Integer to String,UserProfile,scalar_type,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,51.5,1,[age] must be integer
+TYP-01,Integer to String,UserProfile,scalar_type,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,9.1,0,Passed (No drift flagged)
+TYP-02,String to Number,UserProfile,scalar_type,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,1,0,Passed (No drift flagged)
+TYP-02,String to Number,UserProfile,scalar_type,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,116.1,1,"[userId] Expected string, received number"
+TYP-02,String to Number,UserProfile,scalar_type,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,3.9,1,[userId] Expected string
+TYP-02,String to Number,UserProfile,scalar_type,breaking,Valibot Modular Validation,true,true,true,false,false,false,92.3,1,[userId] Invalid type: Expected string but received 9948201
+TYP-02,String to Number,UserProfile,scalar_type,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,47.6,1,[userId] must be string
+TYP-02,String to Number,UserProfile,scalar_type,breaking,Consumer-Driven Contract Testing (Pact),true,true,true,false,false,false,14.3,1,"[userId] Consumer expectation unmet: type mismatch on 'userId', expected string but received number"
+TYP-03,Boolean to String Literal,UserProfile,scalar_type,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.8,0,Passed (No drift flagged)
+TYP-03,Boolean to String Literal,UserProfile,scalar_type,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,114.1,1,"[preferences.newsletter] Expected boolean, received string"
+TYP-03,Boolean to String Literal,UserProfile,scalar_type,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,16.1,1,[preferences.newsletter] Expected boolean
+TYP-03,Boolean to String Literal,UserProfile,scalar_type,breaking,Valibot Modular Validation,true,true,true,false,false,false,48.9,1,"[preferences.newsletter] Invalid type: Expected boolean but received ""true"""
+TYP-03,Boolean to String Literal,UserProfile,scalar_type,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,62.8,1,[preferences.newsletter] must be boolean
+TYP-03,Boolean to String Literal,UserProfile,scalar_type,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,13.1,0,Passed (No drift flagged)
+TYP-04,ISO Timestamp to Epoch Milliseconds,UserProfile,scalar_type,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,1.1,0,Passed (No drift flagged)
+TYP-04,ISO Timestamp to Epoch Milliseconds,UserProfile,scalar_type,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,138,1,"[createdAt] Expected string, received number"
+TYP-04,ISO Timestamp to Epoch Milliseconds,UserProfile,scalar_type,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,28.2,1,[createdAt] Expected string
+TYP-04,ISO Timestamp to Epoch Milliseconds,UserProfile,scalar_type,breaking,Valibot Modular Validation,true,true,true,false,false,false,164.8,1,[createdAt] Invalid type: Expected string but received 1794650868256
+TYP-04,ISO Timestamp to Epoch Milliseconds,UserProfile,scalar_type,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,63.8,1,[createdAt] must be string
+TYP-04,ISO Timestamp to Epoch Milliseconds,UserProfile,scalar_type,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,13.8,0,Passed (No drift flagged)
+TYP-05,Scalar to Array,UserProfile,scalar_type,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.8,0,Passed (No drift flagged)
+TYP-05,Scalar to Array,UserProfile,scalar_type,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,511.6,1,"[role] Expected 'ADMIN' | 'MEMBER' | 'GUEST', received array"
+TYP-05,Scalar to Array,UserProfile,scalar_type,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,22.8,1,[role] Expected union value
+TYP-05,Scalar to Array,UserProfile,scalar_type,breaking,Valibot Modular Validation,true,true,true,false,false,false,139.4,1,"[role] Invalid type: Expected (""ADMIN"" | ""MEMBER"" | ""GUEST"") but received Array"
+TYP-05,Scalar to Array,UserProfile,scalar_type,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,176.6,1,[role] must be string; [role] must be equal to constant; [role] must be string; [role] must be equal to constant; [role] must be string; [role] must be equal to constant; [role] must match a schema in anyOf
+TYP-05,Scalar to Array,UserProfile,scalar_type,breaking,Consumer-Driven Contract Testing (Pact),true,true,true,false,false,false,44.5,1,"[role] Consumer expectation unmet: type mismatch on 'role', expected string but received object"
+TYP-06,Array to Scalar,UserProfile,scalar_type,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.7,0,Passed (No drift flagged)
+TYP-06,Array to Scalar,UserProfile,scalar_type,breaking,Zod Runtime Schema Validation,true,false,false,false,false,true,139.6,0,Passed (No drift flagged)
+TYP-06,Array to Scalar,UserProfile,scalar_type,breaking,TypeBox (Compiled JSON Schema),true,false,false,false,false,true,134.9,0,Passed (No drift flagged)
+TYP-06,Array to Scalar,UserProfile,scalar_type,breaking,Valibot Modular Validation,true,false,false,false,false,true,126,0,Passed (No drift flagged)
+TYP-06,Array to Scalar,UserProfile,scalar_type,breaking,OpenAPI 3.1 Specification Validation,true,false,false,false,false,true,83,0,Passed (No drift flagged)
+TYP-06,Array to Scalar,UserProfile,scalar_type,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,18,0,Passed (No drift flagged)
+CST-01,Numeric Out of Bounds,UserProfile,constraints,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.7,0,Passed (No drift flagged)
+CST-01,Numeric Out of Bounds,UserProfile,constraints,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,264.1,0.65,[age] Number must be less than or equal to 120
+CST-01,Numeric Out of Bounds,UserProfile,constraints,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,9.3,1,[age] Expected integer to be less or equal to 120
+CST-01,Numeric Out of Bounds,UserProfile,constraints,breaking,Valibot Modular Validation,true,true,true,false,false,false,80,1,[age] Invalid value: Expected <=120 but received 250
+CST-01,Numeric Out of Bounds,UserProfile,constraints,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,37.3,1,[age] must be <= 120
+CST-01,Numeric Out of Bounds,UserProfile,constraints,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,11.8,0,Passed (No drift flagged)
+CST-02,String Regex Violation,UserProfile,constraints,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.7,0,Passed (No drift flagged)
+CST-02,String Regex Violation,UserProfile,constraints,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,182.2,0.65,[email] Invalid email
+CST-02,String Regex Violation,UserProfile,constraints,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,6.2,1,[email] Expected string to match 'email' format
+CST-02,String Regex Violation,UserProfile,constraints,breaking,Valibot Modular Validation,true,true,true,false,false,false,43.5,1,"[email] Invalid email: Received ""sarah_connor_at_resistance_dot_com"""
+CST-02,String Regex Violation,UserProfile,constraints,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,42.1,1,"[email] must match format ""email"""
+CST-02,String Regex Violation,UserProfile,constraints,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,32.3,0,Passed (No drift flagged)
+CST-03,String Length Excess,UserProfile,constraints,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.5,0,Passed (No drift flagged)
+CST-03,String Length Excess,UserProfile,constraints,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,114.2,0.65,[displayName] String must contain at most 100 character(s)
+CST-03,String Length Excess,UserProfile,constraints,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,6.7,1,[displayName] Expected string length less or equal to 100
+CST-03,String Length Excess,UserProfile,constraints,breaking,Valibot Modular Validation,true,true,true,false,false,false,39.2,1,[displayName] Invalid length: Expected <=100 but received 250
+CST-03,String Length Excess,UserProfile,constraints,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,52.8,1,[displayName] must NOT have more than 100 characters
+CST-03,String Length Excess,UserProfile,constraints,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,7.5,0,Passed (No drift flagged)
+CST-04,Array Cardinality Underflow,UserProfile,constraints,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.5,0,Passed (No drift flagged)
+CST-04,Array Cardinality Underflow,UserProfile,constraints,breaking,Zod Runtime Schema Validation,true,false,false,false,false,true,56.9,0,Passed (No drift flagged)
+CST-04,Array Cardinality Underflow,UserProfile,constraints,breaking,TypeBox (Compiled JSON Schema),true,false,false,false,false,true,18.4,0,Passed (No drift flagged)
+CST-04,Array Cardinality Underflow,UserProfile,constraints,breaking,Valibot Modular Validation,true,false,false,false,false,true,20,0,Passed (No drift flagged)
+CST-04,Array Cardinality Underflow,UserProfile,constraints,breaking,OpenAPI 3.1 Specification Validation,true,false,false,false,false,true,21.9,0,Passed (No drift flagged)
+CST-04,Array Cardinality Underflow,UserProfile,constraints,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,9.4,0,Passed (No drift flagged)
+CST-05,Empty String Violation,UserProfile,constraints,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.3,0,Passed (No drift flagged)
+CST-05,Empty String Violation,UserProfile,constraints,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,103.9,0.65,[displayName] String must contain at least 1 character(s)
+CST-05,Empty String Violation,UserProfile,constraints,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,5.7,0.65,[displayName] Expected string length greater or equal to 1
+CST-05,Empty String Violation,UserProfile,constraints,breaking,Valibot Modular Validation,true,true,true,false,false,false,32.6,1,[displayName] Invalid length: Expected >=1 but received 0
+CST-05,Empty String Violation,UserProfile,constraints,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,26.7,1,[displayName] must NOT have fewer than 1 characters
+CST-05,Empty String Violation,UserProfile,constraints,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,7.4,0,Passed (No drift flagged)
+NUL-01,Mandatory Key Set to Null,UserProfile,nullability,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.6,0,Passed (No drift flagged)
+NUL-01,Mandatory Key Set to Null,UserProfile,nullability,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,83.8,1,"[displayName] Expected string, received null"
+NUL-01,Mandatory Key Set to Null,UserProfile,nullability,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,11.9,1,[displayName] Expected string
+NUL-01,Mandatory Key Set to Null,UserProfile,nullability,breaking,Valibot Modular Validation,true,true,true,false,false,false,63.7,1,[displayName] Invalid type: Expected string but received null
+NUL-01,Mandatory Key Set to Null,UserProfile,nullability,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,76.2,1,[displayName] must be string
+NUL-01,Mandatory Key Set to Null,UserProfile,nullability,breaking,Consumer-Driven Contract Testing (Pact),true,true,true,false,false,false,16.2,1,[displayName] Consumer expectation unmet: expected non-null property 'displayName' received null
+NUL-02,Mandatory Key Set to Undefined,UserProfile,nullability,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.5,0,Passed (No drift flagged)
+NUL-02,Mandatory Key Set to Undefined,UserProfile,nullability,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,100.8,1,[email] Required
+NUL-02,Mandatory Key Set to Undefined,UserProfile,nullability,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,1.8,1,[email] Expected string
+NUL-02,Mandatory Key Set to Undefined,UserProfile,nullability,breaking,Valibot Modular Validation,true,true,true,false,false,false,30.4,1,[email] Invalid type: Expected string but received undefined
+NUL-02,Mandatory Key Set to Undefined,UserProfile,nullability,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,30.6,1,[email] must have required property 'email'
+NUL-02,Mandatory Key Set to Undefined,UserProfile,nullability,breaking,Consumer-Driven Contract Testing (Pact),true,true,true,false,false,false,7.7,1,[email] Consumer expectation unmet: expected property 'email' is missing
+NUL-03,Nullable Key Provided Null,UserProfile,nullability,non-breaking,Static TypeScript (Compile-Time Only),false,false,false,true,false,false,0.6,0,Passed (No drift flagged)
+NUL-03,Nullable Key Provided Null,UserProfile,nullability,non-breaking,Zod Runtime Schema Validation,false,false,false,true,false,false,59.8,0,Passed (No drift flagged)
+NUL-03,Nullable Key Provided Null,UserProfile,nullability,non-breaking,TypeBox (Compiled JSON Schema),false,false,false,true,false,false,15.7,0,Passed (No drift flagged)
+NUL-03,Nullable Key Provided Null,UserProfile,nullability,non-breaking,Valibot Modular Validation,false,false,false,true,false,false,19.2,0,Passed (No drift flagged)
+NUL-03,Nullable Key Provided Null,UserProfile,nullability,non-breaking,OpenAPI 3.1 Specification Validation,false,false,false,true,false,false,13.7,0,Passed (No drift flagged)
+NUL-03,Nullable Key Provided Null,UserProfile,nullability,non-breaking,Consumer-Driven Contract Testing (Pact),false,false,false,true,false,false,7.1,0,Passed (No drift flagged)
+NUL-04,Optional Property Made Mandatory,UserProfile,nullability,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.5,0,Passed (No drift flagged)
+NUL-04,Optional Property Made Mandatory,UserProfile,nullability,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,63.6,1,[bio] Required
+NUL-04,Optional Property Made Mandatory,UserProfile,nullability,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,15.6,1,[bio] Expected required property; [bio] Expected union value
+NUL-04,Optional Property Made Mandatory,UserProfile,nullability,breaking,Valibot Modular Validation,true,true,true,false,false,false,53.9,1,"[bio] Invalid key: Expected ""bio"" but received undefined"
+NUL-04,Optional Property Made Mandatory,UserProfile,nullability,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,32.6,1,[bio] must have required property 'bio'
+NUL-04,Optional Property Made Mandatory,UserProfile,nullability,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,7.5,0,Passed (No drift flagged)
+ENM-01,Undocumented Enum Variant,UserProfile,semantic_enum,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.5,0,Passed (No drift flagged)
+ENM-01,Undocumented Enum Variant,UserProfile,semantic_enum,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,108.1,1,"[role] Invalid enum value. Expected 'ADMIN' | 'MEMBER' | 'GUEST', received 'SUPER_ADMIN'"
+ENM-01,Undocumented Enum Variant,UserProfile,semantic_enum,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,4.1,1,[role] Expected union value
+ENM-01,Undocumented Enum Variant,UserProfile,semantic_enum,breaking,Valibot Modular Validation,true,true,true,false,false,false,197.4,1,"[role] Invalid type: Expected (""ADMIN"" | ""MEMBER"" | ""GUEST"") but received ""SUPER_ADMIN"""
+ENM-01,Undocumented Enum Variant,UserProfile,semantic_enum,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,79.9,1,[role] must be equal to constant; [role] must be equal to constant; [role] must be equal to constant; [role] must match a schema in anyOf
+ENM-01,Undocumented Enum Variant,UserProfile,semantic_enum,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,13.5,0,Passed (No drift flagged)
+ENM-02,Enum Casing Shift,UserProfile,semantic_enum,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.6,0,Passed (No drift flagged)
+ENM-02,Enum Casing Shift,UserProfile,semantic_enum,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,156.1,1,"[role] Invalid enum value. Expected 'ADMIN' | 'MEMBER' | 'GUEST', received 'admin'"
+ENM-02,Enum Casing Shift,UserProfile,semantic_enum,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,9.9,1,[role] Expected union value
+ENM-02,Enum Casing Shift,UserProfile,semantic_enum,breaking,Valibot Modular Validation,true,true,true,false,false,false,39.3,1,"[role] Invalid type: Expected (""ADMIN"" | ""MEMBER"" | ""GUEST"") but received ""admin"""
+ENM-02,Enum Casing Shift,UserProfile,semantic_enum,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,25.5,1,[role] must be equal to constant; [role] must be equal to constant; [role] must be equal to constant; [role] must match a schema in anyOf
+ENM-02,Enum Casing Shift,UserProfile,semantic_enum,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,8.1,0,Passed (No drift flagged)
+ENM-03,Deprecated Enum Value Sent,UserProfile,semantic_enum,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,1.3,0,Passed (No drift flagged)
+ENM-03,Deprecated Enum Value Sent,UserProfile,semantic_enum,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,156.7,1,"[role] Invalid enum value. Expected 'ADMIN' | 'MEMBER' | 'GUEST', received 'DEPRECATED_LEGACY_PROTOCOL'"
+ENM-03,Deprecated Enum Value Sent,UserProfile,semantic_enum,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,9.6,1,[role] Expected union value
+ENM-03,Deprecated Enum Value Sent,UserProfile,semantic_enum,breaking,Valibot Modular Validation,true,true,true,false,false,false,240,1,"[role] Invalid type: Expected (""ADMIN"" | ""MEMBER"" | ""GUEST"") but received ""DEPRECATED_LEGACY_PROTOCOL"""
+ENM-03,Deprecated Enum Value Sent,UserProfile,semantic_enum,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,33.7,1,[role] must be equal to constant; [role] must be equal to constant; [role] must be equal to constant; [role] must match a schema in anyOf
+ENM-03,Deprecated Enum Value Sent,UserProfile,semantic_enum,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,14.3,0,Passed (No drift flagged)
+PRO-01,Status Code Contract Divergence,UserProfile,protocol,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.4,0,Passed (No drift flagged)
+PRO-01,Status Code Contract Divergence,UserProfile,protocol,breaking,Zod Runtime Schema Validation,true,false,false,false,false,true,89.4,0,Passed (No drift flagged)
+PRO-01,Status Code Contract Divergence,UserProfile,protocol,breaking,TypeBox (Compiled JSON Schema),true,false,false,false,false,true,135.6,0,Passed (No drift flagged)
+PRO-01,Status Code Contract Divergence,UserProfile,protocol,breaking,Valibot Modular Validation,true,false,false,false,false,true,55.1,0,Passed (No drift flagged)
+PRO-01,Status Code Contract Divergence,UserProfile,protocol,breaking,OpenAPI 3.1 Specification Validation,true,false,false,false,false,true,122.7,0,Passed (No drift flagged)
+PRO-01,Status Code Contract Divergence,UserProfile,protocol,breaking,Consumer-Driven Contract Testing (Pact),true,true,true,false,false,false,29.9,1,[error] Consumer expectation failed: unexpected error payload received with HTTP 200
+STR-01,Remove Required Key,OrderCheckout,structural,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.8,0,Passed (No drift flagged)
+STR-01,Remove Required Key,OrderCheckout,structural,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,1025.6,1,[orderId] Required
+STR-01,Remove Required Key,OrderCheckout,structural,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,422.1,1,[orderId] Expected required property; [orderId] Expected string
+STR-01,Remove Required Key,OrderCheckout,structural,breaking,Valibot Modular Validation,true,true,true,false,false,false,603.9,1,"[orderId] Invalid key: Expected ""orderId"" but received undefined"
+STR-01,Remove Required Key,OrderCheckout,structural,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,1619.4,1,[orderId] must have required property 'orderId'
+STR-01,Remove Required Key,OrderCheckout,structural,breaking,Consumer-Driven Contract Testing (Pact),true,true,true,false,false,false,31.1,1,[orderId] Consumer expectation unmet: expected property 'orderId' is missing
+STR-02,Rename Required Key,OrderCheckout,structural,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.6,0,Passed (No drift flagged)
+STR-02,Rename Required Key,OrderCheckout,structural,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,231.6,1,[totalAmount] Required
+STR-02,Rename Required Key,OrderCheckout,structural,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,75,1,[totalAmount] Expected required property; [totalAmount] Expected number
+STR-02,Rename Required Key,OrderCheckout,structural,breaking,Valibot Modular Validation,true,true,true,false,false,false,201.6,1,"[totalAmount] Invalid key: Expected ""totalAmount"" but received undefined"
+STR-02,Rename Required Key,OrderCheckout,structural,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,139,1,[totalAmount] must have required property 'totalAmount'
+STR-02,Rename Required Key,OrderCheckout,structural,breaking,Consumer-Driven Contract Testing (Pact),true,true,true,false,false,false,10,1,[totalAmount] Consumer expectation unmet: expected property 'totalAmount' is missing
+STR-03,Add Unknown Key,OrderCheckout,structural,non-breaking,Static TypeScript (Compile-Time Only),false,false,false,true,false,false,0.5,0,Passed (No drift flagged)
+STR-03,Add Unknown Key,OrderCheckout,structural,non-breaking,Zod Runtime Schema Validation,false,false,false,true,false,false,150.8,0,Passed (No drift flagged)
+STR-03,Add Unknown Key,OrderCheckout,structural,non-breaking,TypeBox (Compiled JSON Schema),false,false,false,true,false,false,28.7,0,Passed (No drift flagged)
+STR-03,Add Unknown Key,OrderCheckout,structural,non-breaking,Valibot Modular Validation,false,false,false,true,false,false,84.4,0,Passed (No drift flagged)
+STR-03,Add Unknown Key,OrderCheckout,structural,non-breaking,OpenAPI 3.1 Specification Validation,false,false,false,true,false,false,98.2,0,Passed (No drift flagged)
+STR-03,Add Unknown Key,OrderCheckout,structural,non-breaking,Consumer-Driven Contract Testing (Pact),false,false,false,true,false,false,14.2,0,Passed (No drift flagged)
+STR-04,Remove Nested Required Key,OrderCheckout,structural,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.7,0,Passed (No drift flagged)
+STR-04,Remove Nested Required Key,OrderCheckout,structural,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,161,1,[shippingAddress.zip] Required
+STR-04,Remove Nested Required Key,OrderCheckout,structural,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,18.7,1,[shippingAddress.zip] Expected required property; [shippingAddress.zip] Expected string
+STR-04,Remove Nested Required Key,OrderCheckout,structural,breaking,Valibot Modular Validation,true,true,true,false,false,false,463.9,1,"[shippingAddress.zip] Invalid key: Expected ""zip"" but received undefined"
+STR-04,Remove Nested Required Key,OrderCheckout,structural,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,88.4,1,[shippingAddress] must have required property 'zip'
+STR-04,Remove Nested Required Key,OrderCheckout,structural,breaking,Consumer-Driven Contract Testing (Pact),true,true,true,false,false,false,15.6,1,[shippingAddress.zip] Consumer expectation unmet: expected property 'shippingAddress.zip' is missing
+STR-05,Flatten Nested Hierarchy,OrderCheckout,structural,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.5,0,Passed (No drift flagged)
+STR-05,Flatten Nested Hierarchy,OrderCheckout,structural,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,486.7,1,[shippingAddress] Required
+STR-05,Flatten Nested Hierarchy,OrderCheckout,structural,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,20.2,1,[shippingAddress] Expected required property; [shippingAddress] Expected object
+STR-05,Flatten Nested Hierarchy,OrderCheckout,structural,breaking,Valibot Modular Validation,true,true,true,false,false,false,61.2,1,"[shippingAddress] Invalid key: Expected ""shippingAddress"" but received undefined"
+STR-05,Flatten Nested Hierarchy,OrderCheckout,structural,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,56.7,1,[shippingAddress] must have required property 'shippingAddress'
+STR-05,Flatten Nested Hierarchy,OrderCheckout,structural,breaking,Consumer-Driven Contract Testing (Pact),true,true,true,false,false,false,9.8,1,[shippingAddress.zip] Consumer expectation unmet: expected property 'shippingAddress.zip' is missing
+TYP-01,Integer to String,OrderCheckout,scalar_type,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.5,0,Passed (No drift flagged)
+TYP-01,Integer to String,OrderCheckout,scalar_type,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,143.1,1,"[totalAmount] Expected number, received string"
+TYP-01,Integer to String,OrderCheckout,scalar_type,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,6.1,1,[totalAmount] Expected number
+TYP-01,Integer to String,OrderCheckout,scalar_type,breaking,Valibot Modular Validation,true,true,true,false,false,false,58.6,1,"[totalAmount] Invalid type: Expected number but received ""149.99"""
+TYP-01,Integer to String,OrderCheckout,scalar_type,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,86.2,1,[totalAmount] must be number
+TYP-01,Integer to String,OrderCheckout,scalar_type,breaking,Consumer-Driven Contract Testing (Pact),true,true,true,false,false,false,10.2,1,"[totalAmount] Consumer expectation unmet: type mismatch on 'totalAmount', expected number but received string"
+TYP-02,String to Number,OrderCheckout,scalar_type,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.4,0,Passed (No drift flagged)
+TYP-02,String to Number,OrderCheckout,scalar_type,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,95.4,1,"[orderId] Expected string, received number"
+TYP-02,String to Number,OrderCheckout,scalar_type,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,2.6,1,[orderId] Expected string
+TYP-02,String to Number,OrderCheckout,scalar_type,breaking,Valibot Modular Validation,true,true,true,false,false,false,45.1,1,[orderId] Invalid type: Expected string but received 9948201
+TYP-02,String to Number,OrderCheckout,scalar_type,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,72.2,1,[orderId] must be string
+TYP-02,String to Number,OrderCheckout,scalar_type,breaking,Consumer-Driven Contract Testing (Pact),true,true,true,false,false,false,8.1,1,"[orderId] Consumer expectation unmet: type mismatch on 'orderId', expected string but received number"
+TYP-03,Boolean to String Literal,OrderCheckout,scalar_type,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.4,0,Passed (No drift flagged)
+TYP-03,Boolean to String Literal,OrderCheckout,scalar_type,breaking,Zod Runtime Schema Validation,true,false,false,false,false,true,91.7,0,Passed (No drift flagged)
+TYP-03,Boolean to String Literal,OrderCheckout,scalar_type,breaking,TypeBox (Compiled JSON Schema),true,false,false,false,false,true,32.1,0,Passed (No drift flagged)
+TYP-03,Boolean to String Literal,OrderCheckout,scalar_type,breaking,Valibot Modular Validation,true,false,false,false,false,true,249.1,0,Passed (No drift flagged)
+TYP-03,Boolean to String Literal,OrderCheckout,scalar_type,breaking,OpenAPI 3.1 Specification Validation,true,false,false,false,false,true,77.7,0,Passed (No drift flagged)
+TYP-03,Boolean to String Literal,OrderCheckout,scalar_type,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,14.8,0,Passed (No drift flagged)
+TYP-04,ISO Timestamp to Epoch Milliseconds,OrderCheckout,scalar_type,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.7,0,Passed (No drift flagged)
+TYP-04,ISO Timestamp to Epoch Milliseconds,OrderCheckout,scalar_type,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,240,1,"[placedAt] Expected string, received number"
+TYP-04,ISO Timestamp to Epoch Milliseconds,OrderCheckout,scalar_type,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,69.8,1,[placedAt] Expected string
+TYP-04,ISO Timestamp to Epoch Milliseconds,OrderCheckout,scalar_type,breaking,Valibot Modular Validation,true,true,true,false,false,false,71.1,1,[placedAt] Invalid type: Expected string but received 1794650868296
+TYP-04,ISO Timestamp to Epoch Milliseconds,OrderCheckout,scalar_type,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,44.4,1,[placedAt] must be string
+TYP-04,ISO Timestamp to Epoch Milliseconds,OrderCheckout,scalar_type,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,10.2,0,Passed (No drift flagged)
+TYP-05,Scalar to Array,OrderCheckout,scalar_type,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.7,0,Passed (No drift flagged)
+TYP-05,Scalar to Array,OrderCheckout,scalar_type,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,176.7,1,"[status] Expected 'PENDING' | 'PROCESSING' | 'SHIPPED' | 'DELIVERED' | 'CANCELLED', received array"
+TYP-05,Scalar to Array,OrderCheckout,scalar_type,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,19.4,1,[status] Expected union value
+TYP-05,Scalar to Array,OrderCheckout,scalar_type,breaking,Valibot Modular Validation,true,true,true,false,false,false,126.7,1,"[status] Invalid type: Expected (""PENDING"" | ""PROCESSING"" | ""SHIPPED"" | ""DELIVERED"" | ""CANCELLED"") but received Array"
+TYP-05,Scalar to Array,OrderCheckout,scalar_type,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,101.2,1,[status] must be string; [status] must be equal to constant; [status] must be string; [status] must be equal to constant; [status] must be string; [status] must be equal to constant; [status] must be string; [status] must be equal to constant; [status] must be string; [status] must be equal to constant; [status] must match a schema in anyOf
+TYP-05,Scalar to Array,OrderCheckout,scalar_type,breaking,Consumer-Driven Contract Testing (Pact),true,true,true,false,false,false,15,1,"[status] Consumer expectation unmet: type mismatch on 'status', expected string but received object"
+TYP-06,Array to Scalar,OrderCheckout,scalar_type,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,5.4,0,Passed (No drift flagged)
+TYP-06,Array to Scalar,OrderCheckout,scalar_type,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,144.4,1,"[items] Expected array, received object"
+TYP-06,Array to Scalar,OrderCheckout,scalar_type,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,8.8,1,[items] Expected array
+TYP-06,Array to Scalar,OrderCheckout,scalar_type,breaking,Valibot Modular Validation,true,true,true,false,false,false,86,1,[items] Invalid type: Expected Array but received Object
+TYP-06,Array to Scalar,OrderCheckout,scalar_type,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,51.9,1,[items] must be array
+TYP-06,Array to Scalar,OrderCheckout,scalar_type,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,72.1,0,Passed (No drift flagged)
+CST-01,Numeric Out of Bounds,OrderCheckout,constraints,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.6,0,Passed (No drift flagged)
+CST-01,Numeric Out of Bounds,OrderCheckout,constraints,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,602.2,0.65,[totalAmount] Number must be greater than 0
+CST-01,Numeric Out of Bounds,OrderCheckout,constraints,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,4.3,1,[totalAmount] Expected number to be greater or equal to 0.01
+CST-01,Numeric Out of Bounds,OrderCheckout,constraints,breaking,Valibot Modular Validation,true,true,true,false,false,false,127.2,1,[totalAmount] Invalid value: Expected >=0.01 but received -10
+CST-01,Numeric Out of Bounds,OrderCheckout,constraints,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,157.7,1,[totalAmount] must be >= 0.01
+CST-01,Numeric Out of Bounds,OrderCheckout,constraints,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,8.6,0,Passed (No drift flagged)
+CST-02,String Regex Violation,OrderCheckout,constraints,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.6,0,Passed (No drift flagged)
+CST-02,String Regex Violation,OrderCheckout,constraints,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,234,0.65,"[orderId] Invalid input: must start with ""ord_"""
+CST-02,String Regex Violation,OrderCheckout,constraints,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,3.4,1,[orderId] Expected string to match '^ord_'
+CST-02,String Regex Violation,OrderCheckout,constraints,breaking,Valibot Modular Validation,true,true,true,false,false,false,119.8,1,"[orderId] Invalid start: Expected ""ord_"" but received ""INVA"""
+CST-02,String Regex Violation,OrderCheckout,constraints,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,55.3,1,"[orderId] must match pattern ""^ord_"""
+CST-02,String Regex Violation,OrderCheckout,constraints,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,7.4,0,Passed (No drift flagged)
+CST-03,String Length Excess,OrderCheckout,constraints,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.6,0,Passed (No drift flagged)
+CST-03,String Length Excess,OrderCheckout,constraints,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,375.1,0.65,[currency] String must contain exactly 3 character(s)
+CST-03,String Length Excess,OrderCheckout,constraints,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,3.9,1,[currency] Expected string length less or equal to 3
+CST-03,String Length Excess,OrderCheckout,constraints,breaking,Valibot Modular Validation,true,true,true,false,false,false,74.1,1,[currency] Invalid length: Expected 3 but received 20
+CST-03,String Length Excess,OrderCheckout,constraints,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,58.3,1,[currency] must NOT have more than 3 characters
+CST-03,String Length Excess,OrderCheckout,constraints,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,8.3,0,Passed (No drift flagged)
+CST-04,Array Cardinality Underflow,OrderCheckout,constraints,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.4,0,Passed (No drift flagged)
+CST-04,Array Cardinality Underflow,OrderCheckout,constraints,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,167.1,0.65,[items] Array must contain at least 1 element(s)
+CST-04,Array Cardinality Underflow,OrderCheckout,constraints,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,8.8,1,[items] Expected array length to be greater or equal to 1
+CST-04,Array Cardinality Underflow,OrderCheckout,constraints,breaking,Valibot Modular Validation,true,true,true,false,false,false,59.5,1,[items] Invalid length: Expected >=1 but received 0
+CST-04,Array Cardinality Underflow,OrderCheckout,constraints,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,54,1,[items] must NOT have fewer than 1 items
+CST-04,Array Cardinality Underflow,OrderCheckout,constraints,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,6.4,0,Passed (No drift flagged)
+CST-05,Empty String Violation,OrderCheckout,constraints,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.5,0,Passed (No drift flagged)
+CST-05,Empty String Violation,OrderCheckout,constraints,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,246.4,0.65,[customerId] String must contain at least 3 character(s)
+CST-05,Empty String Violation,OrderCheckout,constraints,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,87.9,0.65,[customerId] Expected string length greater or equal to 3
+CST-05,Empty String Violation,OrderCheckout,constraints,breaking,Valibot Modular Validation,true,true,true,false,false,false,102.6,1,[customerId] Invalid length: Expected >=3 but received 0
+CST-05,Empty String Violation,OrderCheckout,constraints,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,70.1,1,[customerId] must NOT have fewer than 3 characters
+CST-05,Empty String Violation,OrderCheckout,constraints,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,8,0,Passed (No drift flagged)
+NUL-01,Mandatory Key Set to Null,OrderCheckout,nullability,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,1.1,0,Passed (No drift flagged)
+NUL-01,Mandatory Key Set to Null,OrderCheckout,nullability,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,172,1,"[totalAmount] Expected number, received null"
+NUL-01,Mandatory Key Set to Null,OrderCheckout,nullability,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,4.1,1,[totalAmount] Expected number
+NUL-01,Mandatory Key Set to Null,OrderCheckout,nullability,breaking,Valibot Modular Validation,true,true,true,false,false,false,52.6,1,[totalAmount] Invalid type: Expected number but received null
+NUL-01,Mandatory Key Set to Null,OrderCheckout,nullability,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,61.4,1,[totalAmount] must be number
+NUL-01,Mandatory Key Set to Null,OrderCheckout,nullability,breaking,Consumer-Driven Contract Testing (Pact),true,true,true,false,false,false,14.3,1,[totalAmount] Consumer expectation unmet: expected non-null property 'totalAmount' received null
+NUL-02,Mandatory Key Set to Undefined,OrderCheckout,nullability,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.5,0,Passed (No drift flagged)
+NUL-02,Mandatory Key Set to Undefined,OrderCheckout,nullability,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,121.2,1,[customerId] Required
+NUL-02,Mandatory Key Set to Undefined,OrderCheckout,nullability,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,2.3,1,[customerId] Expected string
+NUL-02,Mandatory Key Set to Undefined,OrderCheckout,nullability,breaking,Valibot Modular Validation,true,true,true,false,false,false,43.2,1,[customerId] Invalid type: Expected string but received undefined
+NUL-02,Mandatory Key Set to Undefined,OrderCheckout,nullability,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,49.5,1,[customerId] must have required property 'customerId'
+NUL-02,Mandatory Key Set to Undefined,OrderCheckout,nullability,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,6.4,0,Passed (No drift flagged)
+NUL-03,Nullable Key Provided Null,OrderCheckout,nullability,non-breaking,Static TypeScript (Compile-Time Only),false,false,false,true,false,false,0.5,0,Passed (No drift flagged)
+NUL-03,Nullable Key Provided Null,OrderCheckout,nullability,non-breaking,Zod Runtime Schema Validation,false,false,false,true,false,false,98.4,0,Passed (No drift flagged)
+NUL-03,Nullable Key Provided Null,OrderCheckout,nullability,non-breaking,TypeBox (Compiled JSON Schema),false,false,false,true,false,false,37.9,0,Passed (No drift flagged)
+NUL-03,Nullable Key Provided Null,OrderCheckout,nullability,non-breaking,Valibot Modular Validation,false,false,false,true,false,false,35.8,0,Passed (No drift flagged)
+NUL-03,Nullable Key Provided Null,OrderCheckout,nullability,non-breaking,OpenAPI 3.1 Specification Validation,false,false,false,true,false,false,19.9,0,Passed (No drift flagged)
+NUL-03,Nullable Key Provided Null,OrderCheckout,nullability,non-breaking,Consumer-Driven Contract Testing (Pact),false,false,false,true,false,false,5.6,0,Passed (No drift flagged)
+NUL-04,Optional Property Made Mandatory,OrderCheckout,nullability,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.4,0,Passed (No drift flagged)
+NUL-04,Optional Property Made Mandatory,OrderCheckout,nullability,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,133.9,1,[discountCode] Required
+NUL-04,Optional Property Made Mandatory,OrderCheckout,nullability,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,23.1,1,[discountCode] Expected required property; [discountCode] Expected union value
+NUL-04,Optional Property Made Mandatory,OrderCheckout,nullability,breaking,Valibot Modular Validation,true,true,true,false,false,false,136.3,1,"[discountCode] Invalid key: Expected ""discountCode"" but received undefined"
+NUL-04,Optional Property Made Mandatory,OrderCheckout,nullability,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,73.6,1,[discountCode] must have required property 'discountCode'
+NUL-04,Optional Property Made Mandatory,OrderCheckout,nullability,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,13.2,0,Passed (No drift flagged)
+ENM-01,Undocumented Enum Variant,OrderCheckout,semantic_enum,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.5,0,Passed (No drift flagged)
+ENM-01,Undocumented Enum Variant,OrderCheckout,semantic_enum,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,183.7,1,"[status] Invalid enum value. Expected 'PENDING' | 'PROCESSING' | 'SHIPPED' | 'DELIVERED' | 'CANCELLED', received 'REFUNDED_PENDING_DISPUTE'"
+ENM-01,Undocumented Enum Variant,OrderCheckout,semantic_enum,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,5.7,1,[status] Expected union value
+ENM-01,Undocumented Enum Variant,OrderCheckout,semantic_enum,breaking,Valibot Modular Validation,true,true,true,false,false,false,47.6,1,"[status] Invalid type: Expected (""PENDING"" | ""PROCESSING"" | ""SHIPPED"" | ""DELIVERED"" | ""CANCELLED"") but received ""REFUNDED_PENDING_DISPUTE"""
+ENM-01,Undocumented Enum Variant,OrderCheckout,semantic_enum,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,51.6,1,[status] must be equal to constant; [status] must be equal to constant; [status] must be equal to constant; [status] must be equal to constant; [status] must be equal to constant; [status] must match a schema in anyOf
+ENM-01,Undocumented Enum Variant,OrderCheckout,semantic_enum,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,6.3,0,Passed (No drift flagged)
+ENM-02,Enum Casing Shift,OrderCheckout,semantic_enum,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.4,0,Passed (No drift flagged)
+ENM-02,Enum Casing Shift,OrderCheckout,semantic_enum,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,144.8,1,"[status] Invalid enum value. Expected 'PENDING' | 'PROCESSING' | 'SHIPPED' | 'DELIVERED' | 'CANCELLED', received 'processing'"
+ENM-02,Enum Casing Shift,OrderCheckout,semantic_enum,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,4.3,1,[status] Expected union value
+ENM-02,Enum Casing Shift,OrderCheckout,semantic_enum,breaking,Valibot Modular Validation,true,true,true,false,false,false,37.6,1,"[status] Invalid type: Expected (""PENDING"" | ""PROCESSING"" | ""SHIPPED"" | ""DELIVERED"" | ""CANCELLED"") but received ""processing"""
+ENM-02,Enum Casing Shift,OrderCheckout,semantic_enum,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,26.1,1,[status] must be equal to constant; [status] must be equal to constant; [status] must be equal to constant; [status] must be equal to constant; [status] must be equal to constant; [status] must match a schema in anyOf
+ENM-02,Enum Casing Shift,OrderCheckout,semantic_enum,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,6.3,0,Passed (No drift flagged)
+ENM-03,Deprecated Enum Value Sent,OrderCheckout,semantic_enum,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.5,0,Passed (No drift flagged)
+ENM-03,Deprecated Enum Value Sent,OrderCheckout,semantic_enum,breaking,Zod Runtime Schema Validation,true,false,false,false,false,true,207.2,0,Passed (No drift flagged)
+ENM-03,Deprecated Enum Value Sent,OrderCheckout,semantic_enum,breaking,TypeBox (Compiled JSON Schema),true,false,false,false,false,true,29.1,0,Passed (No drift flagged)
+ENM-03,Deprecated Enum Value Sent,OrderCheckout,semantic_enum,breaking,Valibot Modular Validation,true,false,false,false,false,true,34.3,0,Passed (No drift flagged)
+ENM-03,Deprecated Enum Value Sent,OrderCheckout,semantic_enum,breaking,OpenAPI 3.1 Specification Validation,true,false,false,false,false,true,32.5,0,Passed (No drift flagged)
+ENM-03,Deprecated Enum Value Sent,OrderCheckout,semantic_enum,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,31.9,0,Passed (No drift flagged)
+PRO-01,Status Code Contract Divergence,OrderCheckout,protocol,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.6,0,Passed (No drift flagged)
+PRO-01,Status Code Contract Divergence,OrderCheckout,protocol,breaking,Zod Runtime Schema Validation,true,false,false,false,false,true,191.5,0,Passed (No drift flagged)
+PRO-01,Status Code Contract Divergence,OrderCheckout,protocol,breaking,TypeBox (Compiled JSON Schema),true,false,false,false,false,true,40.7,0,Passed (No drift flagged)
+PRO-01,Status Code Contract Divergence,OrderCheckout,protocol,breaking,Valibot Modular Validation,true,false,false,false,false,true,58.9,0,Passed (No drift flagged)
+PRO-01,Status Code Contract Divergence,OrderCheckout,protocol,breaking,OpenAPI 3.1 Specification Validation,true,false,false,false,false,true,58.9,0,Passed (No drift flagged)
+PRO-01,Status Code Contract Divergence,OrderCheckout,protocol,breaking,Consumer-Driven Contract Testing (Pact),true,true,true,false,false,false,19.9,1,[error] Consumer expectation failed: unexpected error payload received with HTTP 200
+STR-01,Remove Required Key,PaymentTransaction,structural,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.6,0,Passed (No drift flagged)
+STR-01,Remove Required Key,PaymentTransaction,structural,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,266.8,1,[transactionId] Required
+STR-01,Remove Required Key,PaymentTransaction,structural,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,178.5,1,[transactionId] Expected required property; [transactionId] Expected string
+STR-01,Remove Required Key,PaymentTransaction,structural,breaking,Valibot Modular Validation,true,true,true,false,false,false,75,1,"[transactionId] Invalid key: Expected ""transactionId"" but received undefined"
+STR-01,Remove Required Key,PaymentTransaction,structural,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,1731.5,1,[transactionId] must have required property 'transactionId'
+STR-01,Remove Required Key,PaymentTransaction,structural,breaking,Consumer-Driven Contract Testing (Pact),true,true,true,false,false,false,14.9,1,[transactionId] Consumer expectation unmet: expected property 'transactionId' is missing
+STR-02,Rename Required Key,PaymentTransaction,structural,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.4,0,Passed (No drift flagged)
+STR-02,Rename Required Key,PaymentTransaction,structural,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,156.4,1,[amount] Required
+STR-02,Rename Required Key,PaymentTransaction,structural,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,66.7,1,[amount] Expected required property; [amount] Expected integer
+STR-02,Rename Required Key,PaymentTransaction,structural,breaking,Valibot Modular Validation,true,true,true,false,false,false,113.8,1,"[amount] Invalid key: Expected ""amount"" but received undefined"
+STR-02,Rename Required Key,PaymentTransaction,structural,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,74.8,1,[amount] must have required property 'amount'
+STR-02,Rename Required Key,PaymentTransaction,structural,breaking,Consumer-Driven Contract Testing (Pact),true,true,true,false,false,false,7.9,1,[amount] Consumer expectation unmet: expected property 'amount' is missing
+STR-03,Add Unknown Key,PaymentTransaction,structural,non-breaking,Static TypeScript (Compile-Time Only),false,false,false,true,false,false,0.4,0,Passed (No drift flagged)
+STR-03,Add Unknown Key,PaymentTransaction,structural,non-breaking,Zod Runtime Schema Validation,false,false,false,true,false,false,96.9,0,Passed (No drift flagged)
+STR-03,Add Unknown Key,PaymentTransaction,structural,non-breaking,TypeBox (Compiled JSON Schema),false,false,false,true,false,false,22.8,0,Passed (No drift flagged)
+STR-03,Add Unknown Key,PaymentTransaction,structural,non-breaking,Valibot Modular Validation,false,false,false,true,false,false,15.8,0,Passed (No drift flagged)
+STR-03,Add Unknown Key,PaymentTransaction,structural,non-breaking,OpenAPI 3.1 Specification Validation,false,false,false,true,false,false,77.3,0,Passed (No drift flagged)
+STR-03,Add Unknown Key,PaymentTransaction,structural,non-breaking,Consumer-Driven Contract Testing (Pact),false,false,false,true,false,false,8.7,0,Passed (No drift flagged)
+STR-04,Remove Nested Required Key,PaymentTransaction,structural,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.3,0,Passed (No drift flagged)
+STR-04,Remove Nested Required Key,PaymentTransaction,structural,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,158.1,1,[metadata.referenceCode] Required
+STR-04,Remove Nested Required Key,PaymentTransaction,structural,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,15,1,[metadata.referenceCode] Expected required property; [metadata.referenceCode] Expected string
+STR-04,Remove Nested Required Key,PaymentTransaction,structural,breaking,Valibot Modular Validation,true,true,true,false,false,false,54.1,1,"[metadata.referenceCode] Invalid key: Expected ""referenceCode"" but received undefined"
+STR-04,Remove Nested Required Key,PaymentTransaction,structural,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,57.7,1,[metadata] must have required property 'referenceCode'
+STR-04,Remove Nested Required Key,PaymentTransaction,structural,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,16.1,0,Passed (No drift flagged)
+STR-05,Flatten Nested Hierarchy,PaymentTransaction,structural,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.7,0,Passed (No drift flagged)
+STR-05,Flatten Nested Hierarchy,PaymentTransaction,structural,breaking,Zod Runtime Schema Validation,true,false,false,false,false,true,84.9,0,Passed (No drift flagged)
+STR-05,Flatten Nested Hierarchy,PaymentTransaction,structural,breaking,TypeBox (Compiled JSON Schema),true,false,false,false,false,true,21.9,0,Passed (No drift flagged)
+STR-05,Flatten Nested Hierarchy,PaymentTransaction,structural,breaking,Valibot Modular Validation,true,false,false,false,false,true,24.9,0,Passed (No drift flagged)
+STR-05,Flatten Nested Hierarchy,PaymentTransaction,structural,breaking,OpenAPI 3.1 Specification Validation,true,false,false,false,false,true,66.3,0,Passed (No drift flagged)
+STR-05,Flatten Nested Hierarchy,PaymentTransaction,structural,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,8.7,0,Passed (No drift flagged)
+TYP-01,Integer to String,PaymentTransaction,scalar_type,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.5,0,Passed (No drift flagged)
+TYP-01,Integer to String,PaymentTransaction,scalar_type,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,84.1,1,"[amount] Expected number, received string"
+TYP-01,Integer to String,PaymentTransaction,scalar_type,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,6.2,1,[amount] Expected integer
+TYP-01,Integer to String,PaymentTransaction,scalar_type,breaking,Valibot Modular Validation,true,true,true,false,false,false,53,1,"[amount] Invalid type: Expected number but received ""25000"""
+TYP-01,Integer to String,PaymentTransaction,scalar_type,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,60,1,[amount] must be integer
+TYP-01,Integer to String,PaymentTransaction,scalar_type,breaking,Consumer-Driven Contract Testing (Pact),true,true,true,false,false,false,9,1,"[amount] Consumer expectation unmet: type mismatch on 'amount', expected number but received string"
+TYP-02,String to Number,PaymentTransaction,scalar_type,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.5,0,Passed (No drift flagged)
+TYP-02,String to Number,PaymentTransaction,scalar_type,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,84.7,1,"[transactionId] Expected string, received number"
+TYP-02,String to Number,PaymentTransaction,scalar_type,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,5.6,1,[transactionId] Expected string
+TYP-02,String to Number,PaymentTransaction,scalar_type,breaking,Valibot Modular Validation,true,true,true,false,false,false,138.6,1,[transactionId] Invalid type: Expected string but received 9948201
+TYP-02,String to Number,PaymentTransaction,scalar_type,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,70.6,1,[transactionId] must be string
+TYP-02,String to Number,PaymentTransaction,scalar_type,breaking,Consumer-Driven Contract Testing (Pact),true,true,true,false,false,false,9.8,1,"[transactionId] Consumer expectation unmet: type mismatch on 'transactionId', expected string but received number"
+TYP-03,Boolean to String Literal,PaymentTransaction,scalar_type,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.4,0,Passed (No drift flagged)
+TYP-03,Boolean to String Literal,PaymentTransaction,scalar_type,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,385,1,"[settled] Expected boolean, received string"
+TYP-03,Boolean to String Literal,PaymentTransaction,scalar_type,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,16.8,1,[settled] Expected boolean
+TYP-03,Boolean to String Literal,PaymentTransaction,scalar_type,breaking,Valibot Modular Validation,true,true,true,false,false,false,30.7,1,"[settled] Invalid type: Expected boolean but received ""true"""
+TYP-03,Boolean to String Literal,PaymentTransaction,scalar_type,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,54.8,1,[settled] must be boolean
+TYP-03,Boolean to String Literal,PaymentTransaction,scalar_type,breaking,Consumer-Driven Contract Testing (Pact),true,true,true,false,false,false,7,1,"[settled] Consumer expectation unmet: type mismatch on 'settled', expected boolean but received string"
+TYP-04,ISO Timestamp to Epoch Milliseconds,PaymentTransaction,scalar_type,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.4,0,Passed (No drift flagged)
+TYP-04,ISO Timestamp to Epoch Milliseconds,PaymentTransaction,scalar_type,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,59.8,1,"[timestamp] Expected string, received number"
+TYP-04,ISO Timestamp to Epoch Milliseconds,PaymentTransaction,scalar_type,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,43.3,1,[timestamp] Expected string
+TYP-04,ISO Timestamp to Epoch Milliseconds,PaymentTransaction,scalar_type,breaking,Valibot Modular Validation,true,true,true,false,false,false,27.3,1,[timestamp] Invalid type: Expected string but received 1794650868329
+TYP-04,ISO Timestamp to Epoch Milliseconds,PaymentTransaction,scalar_type,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,124.1,1,[timestamp] must be string
+TYP-04,ISO Timestamp to Epoch Milliseconds,PaymentTransaction,scalar_type,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,8.3,0,Passed (No drift flagged)
+TYP-05,Scalar to Array,PaymentTransaction,scalar_type,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.5,0,Passed (No drift flagged)
+TYP-05,Scalar to Array,PaymentTransaction,scalar_type,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,107.3,1,"[currency] Expected 'USD' | 'EUR' | 'GBP' | 'JPY', received array"
+TYP-05,Scalar to Array,PaymentTransaction,scalar_type,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,21.1,1,[currency] Expected union value
+TYP-05,Scalar to Array,PaymentTransaction,scalar_type,breaking,Valibot Modular Validation,true,true,true,false,false,false,37.1,1,"[currency] Invalid type: Expected (""USD"" | ""EUR"" | ""GBP"" | ""JPY"") but received Array"
+TYP-05,Scalar to Array,PaymentTransaction,scalar_type,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,129.2,1,[currency] must be string; [currency] must be equal to constant; [currency] must be string; [currency] must be equal to constant; [currency] must be string; [currency] must be equal to constant; [currency] must be string; [currency] must be equal to constant; [currency] must match a schema in anyOf
+TYP-05,Scalar to Array,PaymentTransaction,scalar_type,breaking,Consumer-Driven Contract Testing (Pact),true,true,true,false,false,false,11.7,1,"[currency] Consumer expectation unmet: type mismatch on 'currency', expected string but received object"
+TYP-06,Array to Scalar,PaymentTransaction,scalar_type,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.4,0,Passed (No drift flagged)
+TYP-06,Array to Scalar,PaymentTransaction,scalar_type,breaking,Zod Runtime Schema Validation,true,false,false,false,false,true,76.4,0,Passed (No drift flagged)
+TYP-06,Array to Scalar,PaymentTransaction,scalar_type,breaking,TypeBox (Compiled JSON Schema),true,false,false,false,false,true,33.7,0,Passed (No drift flagged)
+TYP-06,Array to Scalar,PaymentTransaction,scalar_type,breaking,Valibot Modular Validation,true,false,false,false,false,true,20.1,0,Passed (No drift flagged)
+TYP-06,Array to Scalar,PaymentTransaction,scalar_type,breaking,OpenAPI 3.1 Specification Validation,true,false,false,false,false,true,43.6,0,Passed (No drift flagged)
+TYP-06,Array to Scalar,PaymentTransaction,scalar_type,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,8.6,0,Passed (No drift flagged)
+CST-01,Numeric Out of Bounds,PaymentTransaction,constraints,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.3,0,Passed (No drift flagged)
+CST-01,Numeric Out of Bounds,PaymentTransaction,constraints,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,72,0.65,[amount] Number must be greater than 0
+CST-01,Numeric Out of Bounds,PaymentTransaction,constraints,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,2.4,1,[amount] Expected integer to be greater or equal to 1
+CST-01,Numeric Out of Bounds,PaymentTransaction,constraints,breaking,Valibot Modular Validation,true,true,true,false,false,false,28.7,1,[amount] Invalid value: Expected >=1 but received -500
+CST-01,Numeric Out of Bounds,PaymentTransaction,constraints,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,29.6,1,[amount] must be >= 1
+CST-01,Numeric Out of Bounds,PaymentTransaction,constraints,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,4.3,0,Passed (No drift flagged)
+CST-02,String Regex Violation,PaymentTransaction,constraints,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.5,0,Passed (No drift flagged)
+CST-02,String Regex Violation,PaymentTransaction,constraints,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,57.8,0.65,"[transactionId] Invalid input: must start with ""tx_"""
+CST-02,String Regex Violation,PaymentTransaction,constraints,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,1.4,1,[transactionId] Expected string to match '^tx_'
+CST-02,String Regex Violation,PaymentTransaction,constraints,breaking,Valibot Modular Validation,true,true,true,false,false,false,18.7,1,"[transactionId] Invalid start: Expected ""tx_"" but received ""INV"""
+CST-02,String Regex Violation,PaymentTransaction,constraints,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,20.8,1,"[transactionId] must match pattern ""^tx_"""
+CST-02,String Regex Violation,PaymentTransaction,constraints,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,4.4,0,Passed (No drift flagged)
+CST-03,String Length Excess,PaymentTransaction,constraints,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.3,0,Passed (No drift flagged)
+CST-03,String Length Excess,PaymentTransaction,constraints,breaking,Zod Runtime Schema Validation,true,false,false,false,false,true,35.2,0,Passed (No drift flagged)
+CST-03,String Length Excess,PaymentTransaction,constraints,breaking,TypeBox (Compiled JSON Schema),true,false,false,false,false,true,18.6,0,Passed (No drift flagged)
+CST-03,String Length Excess,PaymentTransaction,constraints,breaking,Valibot Modular Validation,true,false,false,false,false,true,10.3,0,Passed (No drift flagged)
+CST-03,String Length Excess,PaymentTransaction,constraints,breaking,OpenAPI 3.1 Specification Validation,true,false,false,false,false,true,18.3,0,Passed (No drift flagged)
+CST-03,String Length Excess,PaymentTransaction,constraints,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,5.3,0,Passed (No drift flagged)
+CST-04,Array Cardinality Underflow,PaymentTransaction,constraints,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,1,0,Passed (No drift flagged)
+CST-04,Array Cardinality Underflow,PaymentTransaction,constraints,breaking,Zod Runtime Schema Validation,true,false,false,false,false,true,42.1,0,Passed (No drift flagged)
+CST-04,Array Cardinality Underflow,PaymentTransaction,constraints,breaking,TypeBox (Compiled JSON Schema),true,false,false,false,false,true,15.1,0,Passed (No drift flagged)
+CST-04,Array Cardinality Underflow,PaymentTransaction,constraints,breaking,Valibot Modular Validation,true,false,false,false,false,true,7.7,0,Passed (No drift flagged)
+CST-04,Array Cardinality Underflow,PaymentTransaction,constraints,breaking,OpenAPI 3.1 Specification Validation,true,false,false,false,false,true,16.8,0,Passed (No drift flagged)
+CST-04,Array Cardinality Underflow,PaymentTransaction,constraints,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,4.1,0,Passed (No drift flagged)
+CST-05,Empty String Violation,PaymentTransaction,constraints,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.4,0,Passed (No drift flagged)
+CST-05,Empty String Violation,PaymentTransaction,constraints,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,40.5,0.65,[sourceAccount] String must contain at least 8 character(s)
+CST-05,Empty String Violation,PaymentTransaction,constraints,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,5.8,0.65,[sourceAccount] Expected string length greater or equal to 8
+CST-05,Empty String Violation,PaymentTransaction,constraints,breaking,Valibot Modular Validation,true,true,true,false,false,false,14.2,1,[sourceAccount] Invalid length: Expected >=8 but received 0
+CST-05,Empty String Violation,PaymentTransaction,constraints,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,35.5,1,[sourceAccount] must NOT have fewer than 8 characters
+CST-05,Empty String Violation,PaymentTransaction,constraints,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,5,0,Passed (No drift flagged)
+NUL-01,Mandatory Key Set to Null,PaymentTransaction,nullability,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.4,0,Passed (No drift flagged)
+NUL-01,Mandatory Key Set to Null,PaymentTransaction,nullability,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,56.5,1,"[sourceAccount] Expected string, received null"
+NUL-01,Mandatory Key Set to Null,PaymentTransaction,nullability,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,1.8,1,[sourceAccount] Expected string
+NUL-01,Mandatory Key Set to Null,PaymentTransaction,nullability,breaking,Valibot Modular Validation,true,true,true,false,false,false,20.9,1,[sourceAccount] Invalid type: Expected string but received null
+NUL-01,Mandatory Key Set to Null,PaymentTransaction,nullability,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,32.4,1,[sourceAccount] must be string
+NUL-01,Mandatory Key Set to Null,PaymentTransaction,nullability,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,49.2,0,Passed (No drift flagged)
+NUL-02,Mandatory Key Set to Undefined,PaymentTransaction,nullability,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.7,0,Passed (No drift flagged)
+NUL-02,Mandatory Key Set to Undefined,PaymentTransaction,nullability,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,166,1,[destinationAccount] Required
+NUL-02,Mandatory Key Set to Undefined,PaymentTransaction,nullability,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,17.1,1,[destinationAccount] Expected string
+NUL-02,Mandatory Key Set to Undefined,PaymentTransaction,nullability,breaking,Valibot Modular Validation,true,true,true,false,false,false,59.9,1,[destinationAccount] Invalid type: Expected string but received undefined
+NUL-02,Mandatory Key Set to Undefined,PaymentTransaction,nullability,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,75.3,1,[destinationAccount] must have required property 'destinationAccount'
+NUL-02,Mandatory Key Set to Undefined,PaymentTransaction,nullability,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,7.9,0,Passed (No drift flagged)
+NUL-03,Nullable Key Provided Null,PaymentTransaction,nullability,non-breaking,Static TypeScript (Compile-Time Only),false,false,false,true,false,false,14.3,0,Passed (No drift flagged)
+NUL-03,Nullable Key Provided Null,PaymentTransaction,nullability,non-breaking,Zod Runtime Schema Validation,false,false,false,true,false,false,309.4,0,Passed (No drift flagged)
+NUL-03,Nullable Key Provided Null,PaymentTransaction,nullability,non-breaking,TypeBox (Compiled JSON Schema),false,false,false,true,false,false,50.2,0,Passed (No drift flagged)
+NUL-03,Nullable Key Provided Null,PaymentTransaction,nullability,non-breaking,Valibot Modular Validation,false,false,false,true,false,false,43.2,0,Passed (No drift flagged)
+NUL-03,Nullable Key Provided Null,PaymentTransaction,nullability,non-breaking,OpenAPI 3.1 Specification Validation,false,false,false,true,false,false,35.9,0,Passed (No drift flagged)
+NUL-03,Nullable Key Provided Null,PaymentTransaction,nullability,non-breaking,Consumer-Driven Contract Testing (Pact),false,false,false,true,false,false,11.1,0,Passed (No drift flagged)
+NUL-04,Optional Property Made Mandatory,PaymentTransaction,nullability,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.6,0,Passed (No drift flagged)
+NUL-04,Optional Property Made Mandatory,PaymentTransaction,nullability,breaking,Zod Runtime Schema Validation,true,false,false,false,false,true,222.1,0,Passed (No drift flagged)
+NUL-04,Optional Property Made Mandatory,PaymentTransaction,nullability,breaking,TypeBox (Compiled JSON Schema),true,false,false,false,false,true,12.4,0,Passed (No drift flagged)
+NUL-04,Optional Property Made Mandatory,PaymentTransaction,nullability,breaking,Valibot Modular Validation,true,false,false,false,false,true,19.9,0,Passed (No drift flagged)
+NUL-04,Optional Property Made Mandatory,PaymentTransaction,nullability,breaking,OpenAPI 3.1 Specification Validation,true,false,false,false,false,true,22.3,0,Passed (No drift flagged)
+NUL-04,Optional Property Made Mandatory,PaymentTransaction,nullability,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,7.1,0,Passed (No drift flagged)
+ENM-01,Undocumented Enum Variant,PaymentTransaction,semantic_enum,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.5,0,Passed (No drift flagged)
+ENM-01,Undocumented Enum Variant,PaymentTransaction,semantic_enum,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,137.3,1,"[paymentMethod] Invalid enum value. Expected 'CREDIT_CARD' | 'DEBIT_CARD' | 'SEPA_CREDIT_TRANSFER' | 'WIRE', received 'BITCOIN_LIGHTNING'"
+ENM-01,Undocumented Enum Variant,PaymentTransaction,semantic_enum,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,3.3,1,[paymentMethod] Expected union value
+ENM-01,Undocumented Enum Variant,PaymentTransaction,semantic_enum,breaking,Valibot Modular Validation,true,true,true,false,false,false,38,1,"[paymentMethod] Invalid type: Expected (""CREDIT_CARD"" | ""DEBIT_CARD"" | ""SEPA_CREDIT_TRANSFER"" | ""WIRE"") but received ""BITCOIN_LIGHTNING"""
+ENM-01,Undocumented Enum Variant,PaymentTransaction,semantic_enum,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,56.8,1,[paymentMethod] must be equal to constant; [paymentMethod] must be equal to constant; [paymentMethod] must be equal to constant; [paymentMethod] must be equal to constant; [paymentMethod] must match a schema in anyOf
+ENM-01,Undocumented Enum Variant,PaymentTransaction,semantic_enum,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,7.9,0,Passed (No drift flagged)
+ENM-02,Enum Casing Shift,PaymentTransaction,semantic_enum,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.5,0,Passed (No drift flagged)
+ENM-02,Enum Casing Shift,PaymentTransaction,semantic_enum,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,111,1,"[currency] Invalid enum value. Expected 'USD' | 'EUR' | 'GBP' | 'JPY', received 'eur'"
+ENM-02,Enum Casing Shift,PaymentTransaction,semantic_enum,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,3.9,1,[currency] Expected union value
+ENM-02,Enum Casing Shift,PaymentTransaction,semantic_enum,breaking,Valibot Modular Validation,true,true,true,false,false,false,31.8,1,"[currency] Invalid type: Expected (""USD"" | ""EUR"" | ""GBP"" | ""JPY"") but received ""eur"""
+ENM-02,Enum Casing Shift,PaymentTransaction,semantic_enum,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,96.3,1,[currency] must be equal to constant; [currency] must be equal to constant; [currency] must be equal to constant; [currency] must be equal to constant; [currency] must match a schema in anyOf
+ENM-02,Enum Casing Shift,PaymentTransaction,semantic_enum,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,8.6,0,Passed (No drift flagged)
+ENM-03,Deprecated Enum Value Sent,PaymentTransaction,semantic_enum,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.5,0,Passed (No drift flagged)
+ENM-03,Deprecated Enum Value Sent,PaymentTransaction,semantic_enum,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,111,1,"[paymentMethod] Invalid enum value. Expected 'CREDIT_CARD' | 'DEBIT_CARD' | 'SEPA_CREDIT_TRANSFER' | 'WIRE', received 'DEPRECATED_LEGACY_PROTOCOL'"
+ENM-03,Deprecated Enum Value Sent,PaymentTransaction,semantic_enum,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,5.5,1,[paymentMethod] Expected union value
+ENM-03,Deprecated Enum Value Sent,PaymentTransaction,semantic_enum,breaking,Valibot Modular Validation,true,true,true,false,false,false,32,1,"[paymentMethod] Invalid type: Expected (""CREDIT_CARD"" | ""DEBIT_CARD"" | ""SEPA_CREDIT_TRANSFER"" | ""WIRE"") but received ""DEPRECATED_LEGACY_PROTOCOL"""
+ENM-03,Deprecated Enum Value Sent,PaymentTransaction,semantic_enum,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,38.2,1,[paymentMethod] must be equal to constant; [paymentMethod] must be equal to constant; [paymentMethod] must be equal to constant; [paymentMethod] must be equal to constant; [paymentMethod] must match a schema in anyOf
+ENM-03,Deprecated Enum Value Sent,PaymentTransaction,semantic_enum,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,7.1,0,Passed (No drift flagged)
+PRO-01,Status Code Contract Divergence,PaymentTransaction,protocol,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.6,0,Passed (No drift flagged)
+PRO-01,Status Code Contract Divergence,PaymentTransaction,protocol,breaking,Zod Runtime Schema Validation,true,false,false,false,false,true,67.3,0,Passed (No drift flagged)
+PRO-01,Status Code Contract Divergence,PaymentTransaction,protocol,breaking,TypeBox (Compiled JSON Schema),true,false,false,false,false,true,34.8,0,Passed (No drift flagged)
+PRO-01,Status Code Contract Divergence,PaymentTransaction,protocol,breaking,Valibot Modular Validation,true,false,false,false,false,true,20.6,0,Passed (No drift flagged)
+PRO-01,Status Code Contract Divergence,PaymentTransaction,protocol,breaking,OpenAPI 3.1 Specification Validation,true,false,false,false,false,true,35,0,Passed (No drift flagged)
+PRO-01,Status Code Contract Divergence,PaymentTransaction,protocol,breaking,Consumer-Driven Contract Testing (Pact),true,true,true,false,false,false,9.1,1,[error] Consumer expectation failed: unexpected error payload received with HTTP 200
+STR-01,Remove Required Key,DeviceTelemetry,structural,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.5,0,Passed (No drift flagged)
+STR-01,Remove Required Key,DeviceTelemetry,structural,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,345,1,[deviceId] Required
+STR-01,Remove Required Key,DeviceTelemetry,structural,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,418.6,1,[deviceId] Expected required property; [deviceId] Expected string
+STR-01,Remove Required Key,DeviceTelemetry,structural,breaking,Valibot Modular Validation,true,true,true,false,false,false,118.5,1,"[deviceId] Invalid key: Expected ""deviceId"" but received undefined"
+STR-01,Remove Required Key,DeviceTelemetry,structural,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,1845.1,1,[deviceId] must have required property 'deviceId'
+STR-01,Remove Required Key,DeviceTelemetry,structural,breaking,Consumer-Driven Contract Testing (Pact),true,true,true,false,false,false,14.8,1,[deviceId] Consumer expectation unmet: expected property 'deviceId' is missing
+STR-02,Rename Required Key,DeviceTelemetry,structural,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.4,0,Passed (No drift flagged)
+STR-02,Rename Required Key,DeviceTelemetry,structural,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,277.6,1,[batteryLevel] Required
+STR-02,Rename Required Key,DeviceTelemetry,structural,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,60.3,1,[batteryLevel] Expected required property; [batteryLevel] Expected number
+STR-02,Rename Required Key,DeviceTelemetry,structural,breaking,Valibot Modular Validation,true,true,true,false,false,false,93.8,1,"[batteryLevel] Invalid key: Expected ""batteryLevel"" but received undefined"
+STR-02,Rename Required Key,DeviceTelemetry,structural,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,230.5,1,[batteryLevel] must have required property 'batteryLevel'
+STR-02,Rename Required Key,DeviceTelemetry,structural,breaking,Consumer-Driven Contract Testing (Pact),true,true,true,false,false,false,14,1,[batteryLevel] Consumer expectation unmet: expected property 'batteryLevel' is missing
+STR-03,Add Unknown Key,DeviceTelemetry,structural,non-breaking,Static TypeScript (Compile-Time Only),false,false,false,true,false,false,0.7,0,Passed (No drift flagged)
+STR-03,Add Unknown Key,DeviceTelemetry,structural,non-breaking,Zod Runtime Schema Validation,false,false,false,true,false,false,166.7,0,Passed (No drift flagged)
+STR-03,Add Unknown Key,DeviceTelemetry,structural,non-breaking,TypeBox (Compiled JSON Schema),false,false,false,true,false,false,51.1,0,Passed (No drift flagged)
+STR-03,Add Unknown Key,DeviceTelemetry,structural,non-breaking,Valibot Modular Validation,false,false,false,true,false,false,42.2,0,Passed (No drift flagged)
+STR-03,Add Unknown Key,DeviceTelemetry,structural,non-breaking,OpenAPI 3.1 Specification Validation,false,false,false,true,false,false,91.6,0,Passed (No drift flagged)
+STR-03,Add Unknown Key,DeviceTelemetry,structural,non-breaking,Consumer-Driven Contract Testing (Pact),false,false,false,true,false,false,11.4,0,Passed (No drift flagged)
+STR-04,Remove Nested Required Key,DeviceTelemetry,structural,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.5,0,Passed (No drift flagged)
+STR-04,Remove Nested Required Key,DeviceTelemetry,structural,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,135.1,1,[location.latitude] Required
+STR-04,Remove Nested Required Key,DeviceTelemetry,structural,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,33.4,1,[location.latitude] Expected required property; [location.latitude] Expected number
+STR-04,Remove Nested Required Key,DeviceTelemetry,structural,breaking,Valibot Modular Validation,true,true,true,false,false,false,80.2,1,"[location.latitude] Invalid key: Expected ""latitude"" but received undefined"
+STR-04,Remove Nested Required Key,DeviceTelemetry,structural,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,66.1,1,[location] must have required property 'latitude'
+STR-04,Remove Nested Required Key,DeviceTelemetry,structural,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,11.2,0,Passed (No drift flagged)
+STR-05,Flatten Nested Hierarchy,DeviceTelemetry,structural,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.9,0,Passed (No drift flagged)
+STR-05,Flatten Nested Hierarchy,DeviceTelemetry,structural,breaking,Zod Runtime Schema Validation,true,false,false,false,false,true,119.1,0,Passed (No drift flagged)
+STR-05,Flatten Nested Hierarchy,DeviceTelemetry,structural,breaking,TypeBox (Compiled JSON Schema),true,false,false,false,false,true,33.6,0,Passed (No drift flagged)
+STR-05,Flatten Nested Hierarchy,DeviceTelemetry,structural,breaking,Valibot Modular Validation,true,false,false,false,false,true,30,0,Passed (No drift flagged)
+STR-05,Flatten Nested Hierarchy,DeviceTelemetry,structural,breaking,OpenAPI 3.1 Specification Validation,true,false,false,false,false,true,38,0,Passed (No drift flagged)
+STR-05,Flatten Nested Hierarchy,DeviceTelemetry,structural,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,8.9,0,Passed (No drift flagged)
+TYP-01,Integer to String,DeviceTelemetry,scalar_type,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.5,0,Passed (No drift flagged)
+TYP-01,Integer to String,DeviceTelemetry,scalar_type,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,142.6,1,"[uptimeSeconds] Expected number, received string"
+TYP-01,Integer to String,DeviceTelemetry,scalar_type,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,38.9,1,[uptimeSeconds] Expected integer
+TYP-01,Integer to String,DeviceTelemetry,scalar_type,breaking,Valibot Modular Validation,true,true,true,false,false,false,50.3,1,"[uptimeSeconds] Invalid type: Expected number but received ""864200"""
+TYP-01,Integer to String,DeviceTelemetry,scalar_type,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,142.4,1,[uptimeSeconds] must be integer
+TYP-01,Integer to String,DeviceTelemetry,scalar_type,breaking,Consumer-Driven Contract Testing (Pact),true,true,true,false,false,false,9.5,1,"[uptimeSeconds] Consumer expectation unmet: type mismatch on 'uptimeSeconds', expected number but received string"
+TYP-02,String to Number,DeviceTelemetry,scalar_type,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.6,0,Passed (No drift flagged)
+TYP-02,String to Number,DeviceTelemetry,scalar_type,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,126.9,1,"[deviceId] Expected string, received number"
+TYP-02,String to Number,DeviceTelemetry,scalar_type,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,4.9,1,[deviceId] Expected string
+TYP-02,String to Number,DeviceTelemetry,scalar_type,breaking,Valibot Modular Validation,true,true,true,false,false,false,54.9,1,[deviceId] Invalid type: Expected string but received 9948201
+TYP-02,String to Number,DeviceTelemetry,scalar_type,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,103.2,1,[deviceId] must be string
+TYP-02,String to Number,DeviceTelemetry,scalar_type,breaking,Consumer-Driven Contract Testing (Pact),true,true,true,false,false,false,9.7,1,"[deviceId] Consumer expectation unmet: type mismatch on 'deviceId', expected string but received number"
+TYP-03,Boolean to String Literal,DeviceTelemetry,scalar_type,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,10.3,0,Passed (No drift flagged)
+TYP-03,Boolean to String Literal,DeviceTelemetry,scalar_type,breaking,Zod Runtime Schema Validation,true,false,false,false,false,true,125.3,0,Passed (No drift flagged)
+TYP-03,Boolean to String Literal,DeviceTelemetry,scalar_type,breaking,TypeBox (Compiled JSON Schema),true,false,false,false,false,true,48.5,0,Passed (No drift flagged)
+TYP-03,Boolean to String Literal,DeviceTelemetry,scalar_type,breaking,Valibot Modular Validation,true,false,false,false,false,true,106.1,0,Passed (No drift flagged)
+TYP-03,Boolean to String Literal,DeviceTelemetry,scalar_type,breaking,OpenAPI 3.1 Specification Validation,true,false,false,false,false,true,44.1,0,Passed (No drift flagged)
+TYP-03,Boolean to String Literal,DeviceTelemetry,scalar_type,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,10.1,0,Passed (No drift flagged)
+TYP-04,ISO Timestamp to Epoch Milliseconds,DeviceTelemetry,scalar_type,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.5,0,Passed (No drift flagged)
+TYP-04,ISO Timestamp to Epoch Milliseconds,DeviceTelemetry,scalar_type,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,116.9,1,"[lastSync] Expected string, received number"
+TYP-04,ISO Timestamp to Epoch Milliseconds,DeviceTelemetry,scalar_type,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,127.6,1,[lastSync] Expected string
+TYP-04,ISO Timestamp to Epoch Milliseconds,DeviceTelemetry,scalar_type,breaking,Valibot Modular Validation,true,true,true,false,false,false,46.9,1,[lastSync] Invalid type: Expected string but received 1794650868357
+TYP-04,ISO Timestamp to Epoch Milliseconds,DeviceTelemetry,scalar_type,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,44.9,1,[lastSync] must be string
+TYP-04,ISO Timestamp to Epoch Milliseconds,DeviceTelemetry,scalar_type,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,6,0,Passed (No drift flagged)
+TYP-05,Scalar to Array,DeviceTelemetry,scalar_type,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.4,0,Passed (No drift flagged)
+TYP-05,Scalar to Array,DeviceTelemetry,scalar_type,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,93.2,1,"[healthStatus] Expected 'HEALTHY' | 'DEGRADED' | 'CRITICAL', received array"
+TYP-05,Scalar to Array,DeviceTelemetry,scalar_type,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,12.1,1,[healthStatus] Expected union value
+TYP-05,Scalar to Array,DeviceTelemetry,scalar_type,breaking,Valibot Modular Validation,true,true,true,false,false,false,28.3,1,"[healthStatus] Invalid type: Expected (""HEALTHY"" | ""DEGRADED"" | ""CRITICAL"") but received Array"
+TYP-05,Scalar to Array,DeviceTelemetry,scalar_type,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,47.6,1,[healthStatus] must be string; [healthStatus] must be equal to constant; [healthStatus] must be string; [healthStatus] must be equal to constant; [healthStatus] must be string; [healthStatus] must be equal to constant; [healthStatus] must match a schema in anyOf
+TYP-05,Scalar to Array,DeviceTelemetry,scalar_type,breaking,Consumer-Driven Contract Testing (Pact),true,true,true,false,false,false,5.7,1,"[healthStatus] Consumer expectation unmet: type mismatch on 'healthStatus', expected string but received object"
+TYP-06,Array to Scalar,DeviceTelemetry,scalar_type,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.4,0,Passed (No drift flagged)
+TYP-06,Array to Scalar,DeviceTelemetry,scalar_type,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,43.6,1,"[readings] Expected array, received object"
+TYP-06,Array to Scalar,DeviceTelemetry,scalar_type,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,3.2,1,[readings] Expected array
+TYP-06,Array to Scalar,DeviceTelemetry,scalar_type,breaking,Valibot Modular Validation,true,true,true,false,false,false,15.8,1,[readings] Invalid type: Expected Array but received Object
+TYP-06,Array to Scalar,DeviceTelemetry,scalar_type,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,16.4,1,[readings] must be array
+TYP-06,Array to Scalar,DeviceTelemetry,scalar_type,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,3.8,0,Passed (No drift flagged)
+CST-01,Numeric Out of Bounds,DeviceTelemetry,constraints,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.3,0,Passed (No drift flagged)
+CST-01,Numeric Out of Bounds,DeviceTelemetry,constraints,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,61.6,0.65,[batteryLevel] Number must be less than or equal to 100
+CST-01,Numeric Out of Bounds,DeviceTelemetry,constraints,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,1.5,1,[batteryLevel] Expected number to be less or equal to 100
+CST-01,Numeric Out of Bounds,DeviceTelemetry,constraints,breaking,Valibot Modular Validation,true,true,true,false,false,false,41.3,1,[batteryLevel] Invalid value: Expected <=100 but received 180.5
+CST-01,Numeric Out of Bounds,DeviceTelemetry,constraints,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,28.3,1,[batteryLevel] must be <= 100
+CST-01,Numeric Out of Bounds,DeviceTelemetry,constraints,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,3.6,0,Passed (No drift flagged)
+CST-02,String Regex Violation,DeviceTelemetry,constraints,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.2,0,Passed (No drift flagged)
+CST-02,String Regex Violation,DeviceTelemetry,constraints,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,188.4,0.65,[firmwareVersion] Invalid
+CST-02,String Regex Violation,DeviceTelemetry,constraints,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,2,1,[firmwareVersion] Expected string to match '^\d+\.\d+\.\d+$'
+CST-02,String Regex Violation,DeviceTelemetry,constraints,breaking,Valibot Modular Validation,true,true,true,false,false,false,37.7,1,"[firmwareVersion] Invalid format: Expected /^\d+\.\d+\.\d+$/ but received ""v2-canary-alpha"""
+CST-02,String Regex Violation,DeviceTelemetry,constraints,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,137.4,1,"[firmwareVersion] must match pattern ""^\d+\.\d+\.\d+$"""
+CST-02,String Regex Violation,DeviceTelemetry,constraints,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,8.8,0,Passed (No drift flagged)
+CST-03,String Length Excess,DeviceTelemetry,constraints,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.6,0,Passed (No drift flagged)
+CST-03,String Length Excess,DeviceTelemetry,constraints,breaking,Zod Runtime Schema Validation,true,false,false,false,false,true,139.3,0,Passed (No drift flagged)
+CST-03,String Length Excess,DeviceTelemetry,constraints,breaking,TypeBox (Compiled JSON Schema),true,false,false,false,false,true,60.4,0,Passed (No drift flagged)
+CST-03,String Length Excess,DeviceTelemetry,constraints,breaking,Valibot Modular Validation,true,false,false,false,false,true,37.2,0,Passed (No drift flagged)
+CST-03,String Length Excess,DeviceTelemetry,constraints,breaking,OpenAPI 3.1 Specification Validation,true,false,false,false,false,true,39,0,Passed (No drift flagged)
+CST-03,String Length Excess,DeviceTelemetry,constraints,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,11.9,0,Passed (No drift flagged)
+CST-04,Array Cardinality Underflow,DeviceTelemetry,constraints,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.4,0,Passed (No drift flagged)
+CST-04,Array Cardinality Underflow,DeviceTelemetry,constraints,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,86.3,0.65,[readings] Array must contain at least 1 element(s)
+CST-04,Array Cardinality Underflow,DeviceTelemetry,constraints,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,7.9,1,[readings] Expected array length to be greater or equal to 1
+CST-04,Array Cardinality Underflow,DeviceTelemetry,constraints,breaking,Valibot Modular Validation,true,true,true,false,false,false,24.6,1,[readings] Invalid length: Expected >=1 but received 0
+CST-04,Array Cardinality Underflow,DeviceTelemetry,constraints,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,37,1,[readings] must NOT have fewer than 1 items
+CST-04,Array Cardinality Underflow,DeviceTelemetry,constraints,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,6.9,0,Passed (No drift flagged)
+CST-05,Empty String Violation,DeviceTelemetry,constraints,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.5,0,Passed (No drift flagged)
+CST-05,Empty String Violation,DeviceTelemetry,constraints,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,111.1,0.65,"[deviceId] Invalid input: must start with ""iot_sens_"""
+CST-05,Empty String Violation,DeviceTelemetry,constraints,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,2.3,0.65,[deviceId] Expected string to match '^iot_sens_'
+CST-05,Empty String Violation,DeviceTelemetry,constraints,breaking,Valibot Modular Validation,true,true,true,false,false,false,31.8,1,"[deviceId] Invalid start: Expected ""iot_sens_"" but received """""
+CST-05,Empty String Violation,DeviceTelemetry,constraints,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,44.5,1,"[deviceId] must match pattern ""^iot_sens_"""
+CST-05,Empty String Violation,DeviceTelemetry,constraints,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,7.4,0,Passed (No drift flagged)
+NUL-01,Mandatory Key Set to Null,DeviceTelemetry,nullability,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.5,0,Passed (No drift flagged)
+NUL-01,Mandatory Key Set to Null,DeviceTelemetry,nullability,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,101.7,1,"[batteryLevel] Expected number, received null"
+NUL-01,Mandatory Key Set to Null,DeviceTelemetry,nullability,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,3,1,[batteryLevel] Expected number
+NUL-01,Mandatory Key Set to Null,DeviceTelemetry,nullability,breaking,Valibot Modular Validation,true,true,true,false,false,false,104.3,1,[batteryLevel] Invalid type: Expected number but received null
+NUL-01,Mandatory Key Set to Null,DeviceTelemetry,nullability,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,44.8,1,[batteryLevel] must be number
+NUL-01,Mandatory Key Set to Null,DeviceTelemetry,nullability,breaking,Consumer-Driven Contract Testing (Pact),true,true,true,false,false,false,7.9,1,[batteryLevel] Consumer expectation unmet: expected non-null property 'batteryLevel' received null
+NUL-02,Mandatory Key Set to Undefined,DeviceTelemetry,nullability,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.6,0,Passed (No drift flagged)
+NUL-02,Mandatory Key Set to Undefined,DeviceTelemetry,nullability,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,121.9,1,[healthStatus] Required
+NUL-02,Mandatory Key Set to Undefined,DeviceTelemetry,nullability,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,4.4,1,[healthStatus] Expected union value
+NUL-02,Mandatory Key Set to Undefined,DeviceTelemetry,nullability,breaking,Valibot Modular Validation,true,true,true,false,false,false,49.6,1,"[healthStatus] Invalid type: Expected (""HEALTHY"" | ""DEGRADED"" | ""CRITICAL"") but received undefined"
+NUL-02,Mandatory Key Set to Undefined,DeviceTelemetry,nullability,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,50.7,1,[healthStatus] must have required property 'healthStatus'
+NUL-02,Mandatory Key Set to Undefined,DeviceTelemetry,nullability,breaking,Consumer-Driven Contract Testing (Pact),true,true,true,false,false,false,8.2,1,[healthStatus] Consumer expectation unmet: expected property 'healthStatus' is missing
+NUL-03,Nullable Key Provided Null,DeviceTelemetry,nullability,non-breaking,Static TypeScript (Compile-Time Only),false,false,false,true,false,false,0.6,0,Passed (No drift flagged)
+NUL-03,Nullable Key Provided Null,DeviceTelemetry,nullability,non-breaking,Zod Runtime Schema Validation,false,false,false,true,false,false,98.9,0,Passed (No drift flagged)
+NUL-03,Nullable Key Provided Null,DeviceTelemetry,nullability,non-breaking,TypeBox (Compiled JSON Schema),false,false,false,true,false,false,26.6,0,Passed (No drift flagged)
+NUL-03,Nullable Key Provided Null,DeviceTelemetry,nullability,non-breaking,Valibot Modular Validation,false,false,false,true,false,false,25.7,0,Passed (No drift flagged)
+NUL-03,Nullable Key Provided Null,DeviceTelemetry,nullability,non-breaking,OpenAPI 3.1 Specification Validation,false,false,false,true,false,false,21.1,0,Passed (No drift flagged)
+NUL-03,Nullable Key Provided Null,DeviceTelemetry,nullability,non-breaking,Consumer-Driven Contract Testing (Pact),false,false,false,true,false,false,6.6,0,Passed (No drift flagged)
+NUL-04,Optional Property Made Mandatory,DeviceTelemetry,nullability,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.4,0,Passed (No drift flagged)
+NUL-04,Optional Property Made Mandatory,DeviceTelemetry,nullability,breaking,Zod Runtime Schema Validation,true,false,false,false,false,true,77.2,0,Passed (No drift flagged)
+NUL-04,Optional Property Made Mandatory,DeviceTelemetry,nullability,breaking,TypeBox (Compiled JSON Schema),true,false,false,false,false,true,12.6,0,Passed (No drift flagged)
+NUL-04,Optional Property Made Mandatory,DeviceTelemetry,nullability,breaking,Valibot Modular Validation,true,false,false,false,false,true,20,0,Passed (No drift flagged)
+NUL-04,Optional Property Made Mandatory,DeviceTelemetry,nullability,breaking,OpenAPI 3.1 Specification Validation,true,false,false,false,false,true,17.6,0,Passed (No drift flagged)
+NUL-04,Optional Property Made Mandatory,DeviceTelemetry,nullability,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,6.5,0,Passed (No drift flagged)
+ENM-01,Undocumented Enum Variant,DeviceTelemetry,semantic_enum,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.4,0,Passed (No drift flagged)
+ENM-01,Undocumented Enum Variant,DeviceTelemetry,semantic_enum,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,100,1,"[healthStatus] Invalid enum value. Expected 'HEALTHY' | 'DEGRADED' | 'CRITICAL', received 'STANDBY_MAINTENANCE'"
+ENM-01,Undocumented Enum Variant,DeviceTelemetry,semantic_enum,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,2.9,1,[healthStatus] Expected union value
+ENM-01,Undocumented Enum Variant,DeviceTelemetry,semantic_enum,breaking,Valibot Modular Validation,true,true,true,false,false,false,30.1,1,"[healthStatus] Invalid type: Expected (""HEALTHY"" | ""DEGRADED"" | ""CRITICAL"") but received ""STANDBY_MAINTENANCE"""
+ENM-01,Undocumented Enum Variant,DeviceTelemetry,semantic_enum,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,58.7,1,[healthStatus] must be equal to constant; [healthStatus] must be equal to constant; [healthStatus] must be equal to constant; [healthStatus] must match a schema in anyOf
+ENM-01,Undocumented Enum Variant,DeviceTelemetry,semantic_enum,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,6.6,0,Passed (No drift flagged)
+ENM-02,Enum Casing Shift,DeviceTelemetry,semantic_enum,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.5,0,Passed (No drift flagged)
+ENM-02,Enum Casing Shift,DeviceTelemetry,semantic_enum,breaking,Zod Runtime Schema Validation,true,true,true,false,false,false,105.9,1,"[healthStatus] Invalid enum value. Expected 'HEALTHY' | 'DEGRADED' | 'CRITICAL', received 'healthy'"
+ENM-02,Enum Casing Shift,DeviceTelemetry,semantic_enum,breaking,TypeBox (Compiled JSON Schema),true,true,true,false,false,false,3.8,1,[healthStatus] Expected union value
+ENM-02,Enum Casing Shift,DeviceTelemetry,semantic_enum,breaking,Valibot Modular Validation,true,true,true,false,false,false,28.4,1,"[healthStatus] Invalid type: Expected (""HEALTHY"" | ""DEGRADED"" | ""CRITICAL"") but received ""healthy"""
+ENM-02,Enum Casing Shift,DeviceTelemetry,semantic_enum,breaking,OpenAPI 3.1 Specification Validation,true,true,true,false,false,false,26.2,1,[healthStatus] must be equal to constant; [healthStatus] must be equal to constant; [healthStatus] must be equal to constant; [healthStatus] must match a schema in anyOf
+ENM-02,Enum Casing Shift,DeviceTelemetry,semantic_enum,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,7.5,0,Passed (No drift flagged)
+ENM-03,Deprecated Enum Value Sent,DeviceTelemetry,semantic_enum,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.5,0,Passed (No drift flagged)
+ENM-03,Deprecated Enum Value Sent,DeviceTelemetry,semantic_enum,breaking,Zod Runtime Schema Validation,true,false,false,false,false,true,89.1,0,Passed (No drift flagged)
+ENM-03,Deprecated Enum Value Sent,DeviceTelemetry,semantic_enum,breaking,TypeBox (Compiled JSON Schema),true,false,false,false,false,true,35.1,0,Passed (No drift flagged)
+ENM-03,Deprecated Enum Value Sent,DeviceTelemetry,semantic_enum,breaking,Valibot Modular Validation,true,false,false,false,false,true,25.4,0,Passed (No drift flagged)
+ENM-03,Deprecated Enum Value Sent,DeviceTelemetry,semantic_enum,breaking,OpenAPI 3.1 Specification Validation,true,false,false,false,false,true,35.1,0,Passed (No drift flagged)
+ENM-03,Deprecated Enum Value Sent,DeviceTelemetry,semantic_enum,breaking,Consumer-Driven Contract Testing (Pact),true,false,false,false,false,true,9.2,0,Passed (No drift flagged)
+PRO-01,Status Code Contract Divergence,DeviceTelemetry,protocol,breaking,Static TypeScript (Compile-Time Only),true,false,false,false,false,true,0.5,0,Passed (No drift flagged)
+PRO-01,Status Code Contract Divergence,DeviceTelemetry,protocol,breaking,Zod Runtime Schema Validation,true,false,false,false,false,true,95.6,0,Passed (No drift flagged)
+PRO-01,Status Code Contract Divergence,DeviceTelemetry,protocol,breaking,TypeBox (Compiled JSON Schema),true,false,false,false,false,true,27.9,0,Passed (No drift flagged)
+PRO-01,Status Code Contract Divergence,DeviceTelemetry,protocol,breaking,Valibot Modular Validation,true,false,false,false,false,true,27.1,0,Passed (No drift flagged)
+PRO-01,Status Code Contract Divergence,DeviceTelemetry,protocol,breaking,OpenAPI 3.1 Specification Validation,true,false,false,false,false,true,53.5,0,Passed (No drift flagged)
+PRO-01,Status Code Contract Divergence,DeviceTelemetry,protocol,breaking,Consumer-Driven Contract Testing (Pact),true,true,true,false,false,false,11.9,1,[error] Consumer expectation failed: unexpected error payload received with HTTP 200

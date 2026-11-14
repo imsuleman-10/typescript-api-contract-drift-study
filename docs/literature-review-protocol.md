@@ -2,10 +2,10 @@
 
 **Project:** Investigating API Contract Drift in TypeScript-Based Web Applications
 **Researcher:** Suleman Zaheer, undergraduate Computer Science student, University of Engineering and Technology, Lahore
-**Protocol version:** 1.0
-**Protocol status:** Draft for researcher/supervisor review
+**Protocol version:** 1.1
+**Protocol status:** Approved by researcher on 2026-11-10; supervisor feedback not yet recorded
 **Prepared:** 2026-11-10
-**Search execution status:** Not started; the queries below are proposed, not executed.
+**Search execution status:** Phase 2 exploratory discovery has started; the planned database searches and screening are incomplete.
 
 ## 1. Purpose and phase boundary
 
@@ -94,6 +94,8 @@ used. These are planned sources, not sources already searched.
 | DBLP | Bibliographic discovery and metadata cross-checking for computing publications | Treat records as discovery/metadata leads; inspect the official publication source for content and publication details |
 | Google Scholar | Supplementary discovery and forward-citation searching | Record query, date, sort mode, and the last result inspected; ranking and coverage can change |
 | Relevant preprint repositories, including arXiv and engrXiv where relevant | Supplementary discovery of non-peer-reviewed manuscripts | Label preprints as preprints unless a peer-reviewed version is independently verified; link versions |
+| OpenAlex | Supplementary bibliographic discovery and metadata cross-checking | Added by protocol amendment A001; not a replacement for the specified databases |
+| Crossref API | DOI and bibliographic metadata verification; supplementary discovery leads | Metadata is not evidence of peer review, relevance, or full-text inspection |
 | Publisher pages, DOI records, and official proceedings pages | Verification of identity, venue, DOI, and publication status | Verification sources; not a substitute for recording where the item was discovered |
 
 Do not treat all platforms as equivalent databases. Record discovery source
@@ -363,9 +365,11 @@ its limitations.
 
 ## 9. Search, screening, and extraction procedure
 
-1. **Freeze the reviewed protocol version.** Obtain researcher approval and
-   seek supervisor feedback before executing the formal search. Record
-   amendments before applying them.
+1. **Freeze the reviewed protocol version.** The researcher approved protocol
+   version 1.0 on 2026-11-10. Record the supervisor-feedback status and any
+   protocol amendments before applying them. Version 1.1 records the
+   supplementary OpenAlex discovery route; the requested database searches
+   remain outstanding.
 2. **Run each planned query** on each accessible source. Assign a unique
    `search_id`; log platform, date/time/time zone, exact query, fields,
    filters, coverage, result count, export count, access limitations, and
@@ -511,6 +515,7 @@ The strategy phase is ready for review when:
 - anticipated biases and protocol amendments are documented.
 
 Completion of this protocol **does not mean the literature has been searched,
-screened, or synthesized**. Obtain the researcher's approval of this protocol
-and preferably supervisor feedback before the next phase begins. Phase 2
-literature collection and screening remains blocked until that approval.
+screened, or synthesized**. The researcher approved the protocol on
+2026-11-10 and authorized Phase 2. Supervisor feedback has not been recorded.
+Phase 2 is in progress; do not begin Phase 3 until the screened literature is
+reviewed and the researcher explicitly approves the next phase.
